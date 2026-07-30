@@ -239,6 +239,14 @@ async function main() {
   const previous = readJson(VERIFIED_FILE, {});
   const allModels = await loadLlmPrices();
   const next = buildVerifiedPricing(allModels, previous);
+
+  const hasPreviousSnapshot = Array.isArray(previous.all_llm_price_models) && previous.all_llm_price_models.length > 0;
+  const hasPriceUpdates = next.latest_sync.new_models.length > 0 || next.latest_sync.changed_models.length > 0;
+  if (hasPreviousSnapshot && !hasPriceUpdates) {
+    console.log("No price updates today");
+    return;
+  }
+
   fs.writeFileSync(VERIFIED_FILE, JSON.stringify(next, null, 2));
   fs.writeFileSync(SNAPSHOT_FILE, JSON.stringify(next.all_llm_price_models.map(model => ({
     provider: model.provider,
