@@ -1054,6 +1054,38 @@
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
     {
+      "provider": "Google",
+      "vendor": "google",
+      "model": "gemini-3.6-flash",
+      "name": "Gemini 3.6 Flash",
+      "input_per_1m": 1.5,
+      "cached_input_per_1m": 0.15,
+      "output_per_1m": 7.5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
+      "effective_date": null,
+      "last_verified": "2026-07-30",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "Google",
+      "vendor": "google",
+      "model": "gemini-3.5-flash-lite",
+      "name": "Gemini 3.5 Flash-Lite",
+      "input_per_1m": 0.3,
+      "cached_input_per_1m": 0.03,
+      "output_per_1m": 2.5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
+      "effective_date": null,
+      "last_verified": "2026-07-30",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
       "provider": "meta-ai",
       "vendor": "meta-ai",
       "model": "muse-spark-1.1",
@@ -2016,8 +2048,24 @@
     {
       "provider": "OpenAI",
       "vendor": "openai",
+      "model": "gpt-5.5-pro-272k",
+      "name": "GPT-5.5 Pro >272k",
+      "input_per_1m": 60,
+      "cached_input_per_1m": null,
+      "output_per_1m": 270,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
+      "effective_date": null,
+      "last_verified": "2026-07-30",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "OpenAI",
+      "vendor": "openai",
       "model": "gpt-5.6-sol",
-      "name": "GPT-5.6 Sol",
+      "name": "GPT-5.6 Sol ≤272k",
       "input_per_1m": 5,
       "cached_input_per_1m": 0.5,
       "output_per_1m": 30,
@@ -2032,11 +2080,11 @@
     {
       "provider": "OpenAI",
       "vendor": "openai",
-      "model": "gpt-5.6-terra",
-      "name": "GPT-5.6 Terra",
-      "input_per_1m": 2.5,
-      "cached_input_per_1m": 0.25,
-      "output_per_1m": 15,
+      "model": "gpt-5.6-sol-272k",
+      "name": "GPT-5.6 Sol >272k",
+      "input_per_1m": 10,
+      "cached_input_per_1m": 1,
+      "output_per_1m": 45,
       "currency": "USD",
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
@@ -2048,15 +2096,63 @@
     {
       "provider": "OpenAI",
       "vendor": "openai",
-      "model": "gpt-5.6-luna",
-      "name": "GPT-5.6 Luna",
-      "input_per_1m": 1,
-      "cached_input_per_1m": 0.1,
-      "output_per_1m": 6,
+      "model": "gpt-5.6-terra",
+      "name": "GPT-5.6 Terra ≤272k",
+      "input_per_1m": 2,
+      "cached_input_per_1m": 0.2,
+      "output_per_1m": 12,
       "currency": "USD",
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
-      "effective_date": null,
+      "effective_date": "2026-07-30",
+      "last_verified": "2026-07-30",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "OpenAI",
+      "vendor": "openai",
+      "model": "gpt-5.6-terra-272k",
+      "name": "GPT-5.6 Terra >272k",
+      "input_per_1m": 4,
+      "cached_input_per_1m": 0.4,
+      "output_per_1m": 18,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
+      "effective_date": "2026-07-30",
+      "last_verified": "2026-07-30",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "OpenAI",
+      "vendor": "openai",
+      "model": "gpt-5.6-luna",
+      "name": "GPT-5.6 Luna ≤272k",
+      "input_per_1m": 0.2,
+      "cached_input_per_1m": 0.02,
+      "output_per_1m": 1.2,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
+      "effective_date": "2026-07-30",
+      "last_verified": "2026-07-30",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "OpenAI",
+      "vendor": "openai",
+      "model": "gpt-5.6-luna-272k",
+      "name": "GPT-5.6 Luna >272k",
+      "input_per_1m": 0.4,
+      "cached_input_per_1m": 0.04,
+      "output_per_1m": 1.8,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
+      "effective_date": "2026-07-30",
       "last_verified": "2026-07-30",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
@@ -2258,259 +2354,72 @@
     "date": "2026-07-30",
     "source": "https://github.com/simonw/llm-prices",
     "source_files_checked": 11,
-    "total_models_checked": 122,
+    "total_models_checked": 128,
     "new_models": [
       {
-        "provider": "Amazon",
-        "model": "amazon-nova-micro",
-        "name": "Amazon Nova Micro"
-      },
-      {
-        "provider": "Amazon",
-        "model": "amazon-nova-lite",
-        "name": "Amazon Nova Lite"
-      },
-      {
-        "provider": "Amazon",
-        "model": "amazon-nova-pro",
-        "name": "Amazon Nova Pro"
-      },
-      {
-        "provider": "Amazon",
-        "model": "amazon-nova-premier",
-        "name": "Amazon Nova Premier"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-3.7-sonnet",
-        "name": "Claude 3.7 Sonnet"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-3.5-sonnet",
-        "name": "Claude 3.5 Sonnet"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-3-opus",
-        "name": "Claude 3 Opus"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-3-haiku",
-        "name": "Claude 3 Haiku"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-3.5-haiku",
-        "name": "Claude 3.5 Haiku"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-4.5-haiku",
-        "name": "Claude 4.5 Haiku"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-sonnet-4.5",
-        "name": "Claude Sonnet 4 and 4.5 ≤200k"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-sonnet-4.5-200k",
-        "name": "Claude Sonnet 4 and 4.5 >200k"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-sonnet-5",
-        "name": "Claude Sonnet 5"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-opus-4",
-        "name": "Claude Opus 4"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-opus-4-1",
-        "name": "Claude Opus 4.1"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-opus-4-5",
-        "name": "Claude Opus 4.5"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-opus-4-6",
-        "name": "Claude Opus 4.6"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-opus-4-7",
-        "name": "Claude Opus 4.7"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-opus-4-8",
-        "name": "Claude Opus 4.8"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-fable-5",
-        "name": "Claude Fable 5"
-      },
-      {
-        "provider": "Anthropic",
-        "model": "claude-mythos-5",
-        "name": "Claude Mythos 5"
-      },
-      {
-        "provider": "DeepSeek",
-        "model": "deepseek-v4-flash",
-        "name": "DeepSeek-V4-Flash"
-      },
-      {
-        "provider": "DeepSeek",
-        "model": "deepseek-v4-pro",
-        "name": "DeepSeek-V4-Pro"
-      },
-      {
-        "provider": "DeepSeek",
-        "model": "deepseek-chat",
-        "name": "DeepSeek Chat"
-      },
-      {
-        "provider": "DeepSeek",
-        "model": "deepseek-reasoner",
-        "name": "DeepSeek Reasoner"
+        "provider": "Google",
+        "model": "gemini-3.6-flash",
+        "name": "Gemini 3.6 Flash"
       },
       {
         "provider": "Google",
-        "model": "gemini-2.5-pro-preview-03-25",
-        "name": "Gemini 2.5 Pro Preview ≤200k"
+        "model": "gemini-3.5-flash-lite",
+        "name": "Gemini 3.5 Flash-Lite"
       },
       {
-        "provider": "Google",
-        "model": "gemini-2.5-pro-preview-03-25-200k",
-        "name": "Gemini 2.5 Pro Preview >200k"
+        "provider": "OpenAI",
+        "model": "gpt-5.5-pro-272k",
+        "name": "GPT-5.5 Pro >272k"
       },
       {
-        "provider": "Google",
-        "model": "gemini-2.0-flash-lite",
-        "name": "Gemini 2.0 Flash Lite"
+        "provider": "OpenAI",
+        "model": "gpt-5.6-sol-272k",
+        "name": "GPT-5.6 Sol >272k"
       },
       {
-        "provider": "Google",
-        "model": "gemini-2.0-flash",
-        "name": "Gemini 2.0 Flash"
+        "provider": "OpenAI",
+        "model": "gpt-5.6-terra-272k",
+        "name": "GPT-5.6 Terra >272k"
       },
       {
-        "provider": "Google",
-        "model": "gemini-1.5-flash",
-        "name": "Gemini 1.5 Flash ≤128k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-1.5-flash-128k",
-        "name": "Gemini 1.5 Flash >128k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-1.5-flash-8b",
-        "name": "Gemini 1.5 Flash-8B ≤128k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-1.5-flash-8b-128k",
-        "name": "Gemini 1.5 Flash-8B >128k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-1.5-pro",
-        "name": "Gemini 1.5 Pro ≤128k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-1.5-pro-128k",
-        "name": "Gemini 1.5 Pro >128k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-2.5-flash",
-        "name": "Gemini 2.5 Flash"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-2.5-flash-lite",
-        "name": "Gemini 2.5 Flash-Lite"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-2.5-flash-preview-09-2025",
-        "name": "Gemini 2.5 Flash Preview (09-2025)"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-2.5-pro",
-        "name": "Gemini 2.5 Pro ≤200k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-2.5-pro-200k",
-        "name": "Gemini 2.5 Pro >200k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-3-pro-preview",
-        "name": "Gemini 3 Pro ≤200k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-3-pro-preview-200k",
-        "name": "Gemini 3 Pro >200k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-3-flash-preview",
-        "name": "Gemini 3 Flash Preview"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-3-1-pro-preview",
-        "name": "Gemini 3.1 Pro ≤200k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-3-1-pro-preview-200k",
-        "name": "Gemini 3.1 Pro >200k"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-3.1-flash-lite-preview",
-        "name": "Gemini 3.1 Flash-Lite"
-      },
-      {
-        "provider": "Google",
-        "model": "gemini-3.5-flash",
-        "name": "Gemini 3.5 Flash"
-      },
-      {
-        "provider": "meta-ai",
-        "model": "muse-spark-1.1",
-        "name": "Muse Spark 1.1"
-      },
-      {
-        "provider": "minimax",
-        "model": "minimax-m2",
-        "name": "MiniMax M2"
-      },
-      {
-        "provider": "Mistral",
-        "model": "pixtral-12b",
-        "name": "Pixtral 12B"
+        "provider": "OpenAI",
+        "model": "gpt-5.6-luna-272k",
+        "name": "GPT-5.6 Luna >272k"
       }
     ],
-    "changed_models": []
+    "changed_models": [
+      {
+        "provider": "OpenAI",
+        "model": "gpt-5.6-terra",
+        "previous": {
+          "input_per_1m": 2.5,
+          "cached_input_per_1m": 0.25,
+          "output_per_1m": 15,
+          "currency": "USD"
+        },
+        "current": {
+          "input_per_1m": 2,
+          "cached_input_per_1m": 0.2,
+          "output_per_1m": 12,
+          "currency": "USD"
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "gpt-5.6-luna",
+        "previous": {
+          "input_per_1m": 1,
+          "cached_input_per_1m": 0.1,
+          "output_per_1m": 6,
+          "currency": "USD"
+        },
+        "current": {
+          "input_per_1m": 0.2,
+          "cached_input_per_1m": 0.02,
+          "output_per_1m": 1.2,
+          "currency": "USD"
+        }
+      }
+    ]
   }
 }
