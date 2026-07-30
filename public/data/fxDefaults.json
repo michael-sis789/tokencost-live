@@ -1,0 +1,14 @@
+{
+  "updatedAt": "2026-06-24",
+  "baseCurrency": "USD",
+  "rates": {
+    "USD": 1,
+    "RMB": 7.22,
+    "MYR": 4.73
+  },
+  "symbols": {
+    "USD": "$",
+    "RMB": "¥",
+    "MYR": "RM"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "tokencost-live",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tokencost.live static site with AI pricing calculators, AdSense-ready content, and daily LLM price sync.",
+  "type": "commonjs",
+  "scripts": {
+    "sync:prices": "node scripts/sync-llm-prices.js",
+    "build:content": "node scripts/adsense-quality-rebuild.js",
+    "test": "node -c scripts/sync-llm-prices.js && node -c scripts/adsense-quality-rebuild.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

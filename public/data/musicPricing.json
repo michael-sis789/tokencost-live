@@ -1,0 +1,14 @@
+{
+  "updatedAt": "2026-06-24",
+  "disclaimer": "Music platform pricing changes often. Verify official pricing before publishing.",
+  "tools": [
+    { "id": "suno", "name": "Suno", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "song generation attempt", "notes": "Use custom cost if your plan is subscription or credit based." },
+    { "id": "udio", "name": "Udio", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "song generation attempt", "notes": "Set monthly plan or per-generation cost manually." },
+    { "id": "stable-audio", "name": "Stable Audio", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "audio generation attempt", "notes": "Use manual subscription or credit cost." },
+    { "id": "elevenlabs-music", "name": "ElevenLabs Music / Audio", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "generation attempt", "notes": "Pricing may vary by product line; verify the current plan." },
+    { "id": "mureka", "name": "Mureka", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "song generation attempt", "notes": "Use custom pricing until you verify current credits or subscription." },
+    { "id": "tiangong-music", "name": "Kunlun Tiangong Music / 天工音乐", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "song generation attempt", "notes": "Manual pricing recommended; official plans may change." },
+    { "id": "tencent-music-ai", "name": "Tencent / QQ Music AI", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "song generation attempt", "notes": "Enter your own credit or subscription cost if applicable." },
+    { "id": "netease-tianyin", "name": "NetEase Tianyin / 网易天音", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "song generation attempt", "notes": "Set as custom until official pricing is confirmed." }
+  ]
+}

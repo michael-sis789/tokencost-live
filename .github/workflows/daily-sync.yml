@@ -1,0 +1,41 @@
+name: Daily LLM Price Sync
+
+on:
+  schedule:
+    # 06:00 Asia/Kuala_Lumpur = 22:00 UTC on the previous day.
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh source-backed pricing data
+        run: node scripts/sync-llm-prices.js
+
+      - name: Commit and push changes
+        run: |
+          if git diff --quiet -- public scripts docs netlify.toml check_prices.js package.json; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public scripts docs netlify.toml check_prices.js package.json
+          git commit -m "chore: daily verified LLM pricing sync [skip ci]"
+          git push origin HEAD:main

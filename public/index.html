@@ -1,0 +1,2374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Agent Workflow & Smart Cost Simulator (2026 Edition)</title>
+  <meta name="description" content="Estimate live AI agent costs across OpenAI, Anthropic, Google, DeepSeek, Qwen, Kimi, MiniMax, Mistral, xAI, Amazon and other live llm-prices providers with multi-turn context growth, prompt caching, reasoning tokens, and monthly routing advice.">
+  <link rel="canonical" href="https://tokencost.live/">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#07111f">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AI Agent Workflow & Smart Cost Simulator">
+  <meta property="og:title" content="AI Agent Workflow & Smart Cost Simulator (2026 Edition)">
+  <meta property="og:description" content="Live LLM pricing, multi-turn agent simulation, caching, reasoning tokens, and savings advice in one free calculator.">
+  <meta property="og:url" content="https://tokencost.live/">
+  <meta property="og:image" content="https://tokencost.live/og-image.svg">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="AI Agent Workflow & Smart Cost Simulator (2026 Edition)">
+  <meta property="twitter:description" content="Live LLM pricing, multi-turn agent simulation, caching, reasoning tokens, and savings advice in one free calculator.">
+  <meta property="twitter:image" content="https://tokencost.live/og-image.svg">
+  <link rel="icon" href="/og-image.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7BLVRRXDS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D7BLVRRXDS');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7206423892750616"
+     crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <!--
+    Google AdSense setup:
+    1. The publisher ID is already configured below.
+    2. Replace the two slot IDs with your AdSense ad unit slot IDs.
+    3. Set ADSENSE_CONFIG.enabled to true after AdSense approves the live site.
+    Ads normally do not render on file:// or localhost; test on the deployed URL.
+  -->
+  <script>
+    window.ADSENSE_CONFIG = {
+      enabled: false,
+      publisherId: "ca-pub-7206423892750616",
+      topSlot: "7035307477",
+      sideSlot: "7520990263"
+    };
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"] },
+          colors: {
+            ink: "#07111f",
+            panel: "#0f172a",
+            panel2: "#111c32"
+          },
+          boxShadow: {
+            glow: "0 0 0 1px rgba(99,102,241,.16), 0 24px 80px rgba(15,23,42,.55)"
+          }
+        }
+      }
+    };
+  </script>
+  <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Tokencost AI Agent Cost Calculator",
+        "url": "https://tokencost.live/",
+        "description": "Free AI agent cost calculator for live LLM pricing, token usage, reasoning tokens, prompt caching, agent turns, and monthly usage estimates.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Live LLM price loading",
+          "Agent loop cost simulation",
+          "Prompt cache hit rate calculator",
+          "Reasoning token cost estimate",
+          "Monthly volume estimate"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I estimate AI agent cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Estimate input tokens, output tokens, hidden reasoning tokens, prompt cache hit rate, agent turns, and monthly calls. Tokencost combines these with live model pricing to estimate per-run and monthly cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why are reasoning tokens important?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Reasoning models can spend hidden thinking tokens beyond the visible response. These tokens can materially increase agent cost, especially in multi-step workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does prompt caching reduce AI cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If a model supports cached input pricing, repeated context can be billed at a lower cached rate. The calculator applies the cache hit rate to the input token portion."
+            }
+          }
+        ]
+      }
+    ]
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { background: radial-gradient(circle at top left, rgba(16,185,129,.22), transparent 28rem), radial-gradient(circle at top right, rgba(99,102,241,.25), transparent 28rem), #07111f; }
+    input[type="range"] { accent-color: #10b981; }
+    .glass { background: linear-gradient(180deg, rgba(15,23,42,.88), rgba(15,23,42,.72)); border: 1px solid rgba(148,163,184,.18); }
+    .metric { background: linear-gradient(180deg, rgba(17,24,39,.84), rgba(15,23,42,.88)); border: 1px solid rgba(148,163,184,.14); }
+    .ad-slot { background: repeating-linear-gradient(135deg, rgba(15,23,42,.92), rgba(15,23,42,.92) 12px, rgba(30,41,59,.72) 12px, rgba(30,41,59,.72) 24px); border: 1px dashed rgba(148,163,184,.32); }
+    .shine { position: relative; overflow: hidden; }
+    .shine::after { content: ""; position: absolute; inset: 0; transform: translateX(-120%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent); animation: shine 7s infinite; }
+    @keyframes shine { 0%, 55% { transform: translateX(-120%); } 75%, 100% { transform: translateX(120%); } }
+    select, input[type="number"] { color-scheme: dark; }
+  </style>
+</head>
+<body class="min-h-screen text-slate-100 antialiased">
+  <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <header class="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div>
+        <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-200">
+          2026 Edition
+        </div>
+        <h1 class="max-w-4xl text-3xl font-extrabold tracking-tight text-white sm:text-5xl">AI Agent Workflow & Smart Cost Simulator</h1>
+        <p class="mt-3 max-w-2xl text-sm leading-6 text-slate-300 sm:text-base">Estimate monthly AI agent spend in seconds. Pick a model, use a preset, then compare real workflow costs across OpenAI, Claude, Gemini, DeepSeek, Qwen, Kimi, MiniMax, Mistral, xAI, Amazon, and more.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-slate-200">
+          <span class="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1.5">Live model pricing</span>
+          <span class="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1.5">China + Western models</span>
+          <span class="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1.5">Agent loop simulation</span>
+          <span class="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1.5">Source-backed research</span>
+          <span class="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1.5">Transparent formulas</span>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <a href="#calculator" class="rounded-md border border-emerald-400/30 bg-emerald-500/15 px-3 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-500/25">Calculate now</a>
+          <a href="/pricing-research/" class="rounded-md border border-slate-600 bg-slate-900/70 px-3 py-2 text-sm font-semibold text-slate-100 transition hover:bg-slate-800">Pricing research</a>
+          <a href="/calculators/" class="rounded-md border border-slate-600 bg-slate-900/70 px-3 py-2 text-sm font-semibold text-slate-100 transition hover:bg-slate-800">Calculators</a>
+        </div>
+      </div>
+      <div class="flex flex-col items-start gap-3 lg:items-end">
+        <div id="syncBadge" class="rounded-full border border-slate-700 bg-slate-900/85 px-4 py-2 text-sm font-semibold text-slate-200 shadow-glow">
+          Syncing live prices from GitHub...
+        </div>
+        <div class="flex gap-2">
+          <button id="copyLinkBtn" class="rounded-md border border-emerald-400/30 bg-emerald-500/15 px-3 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-500/25">Copy Test Link</button>
+          <button id="exportBtn" class="rounded-md border border-slate-600 bg-slate-900/70 px-3 py-2 text-sm font-semibold text-slate-100 transition hover:bg-slate-800">Export CSV</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="mb-5 grid gap-4 lg:grid-cols-3">
+      <div class="glass rounded-lg p-5 shadow-glow">
+        <h2 class="text-lg font-bold text-white">Featured tools</h2>
+        <div class="mt-3 flex flex-col gap-2 text-sm font-semibold">
+          <a class="rounded-md border border-slate-800 bg-slate-950/50 px-3 py-2 text-slate-100 hover:border-emerald-400/40" href="/pricing-research/llm-api-cost-guide/">LLM API Cost Guide</a>
+          <a class="rounded-md border border-slate-800 bg-slate-950/50 px-3 py-2 text-slate-100 hover:border-emerald-400/40" href="/pricing-research/realistic-model-cost-comparison/">Model Cost Comparison</a>
+          <a class="rounded-md border border-slate-800 bg-slate-950/50 px-3 py-2 text-slate-100 hover:border-emerald-400/40" href="/ai-saas-profit-calculator/">AI SaaS Profit Calculator</a>
+        </div>
+      </div>
+      <div class="glass rounded-lg p-5 shadow-glow">
+        <h2 class="text-lg font-bold text-white">Latest guides</h2>
+        <div class="mt-3 flex flex-col gap-2 text-sm font-semibold">
+          <a class="rounded-md border border-slate-800 bg-slate-950/50 px-3 py-2 text-slate-100 hover:border-emerald-400/40" href="/pricing-research/chatbot-cost-model/">Chatbot Cost Model</a>
+          <a class="rounded-md border border-slate-800 bg-slate-950/50 px-3 py-2 text-slate-100 hover:border-emerald-400/40" href="/pricing-research/prompt-caching-economics/">Prompt Caching Economics</a>
+          <a class="rounded-md border border-slate-800 bg-slate-950/50 px-3 py-2 text-slate-100 hover:border-emerald-400/40" href="/pricing-research/ai-api-budget-template/">AI API Budget Template</a>
+        </div>
+      </div>
+      <div class="glass rounded-lg p-5 shadow-glow">
+        <h2 class="text-lg font-bold text-white">Data and methodology</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-300">Tokencost loads live LLM pricing where available, keeps fallback data updated by automation, and marks unstable creator-tool pricing as manual input instead of inventing rates.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-sm font-semibold">
+          <a class="text-emerald-200 hover:text-emerald-100" href="/methodology/">Methodology</a>
+          <a class="text-emerald-200 hover:text-emerald-100" href="/pricing-updates/">Pricing updates</a>
+          <a class="text-emerald-200 hover:text-emerald-100" href="/sources/">Sources</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculator" class="grid gap-5 xl:grid-cols-[0.9fr_1.05fr_220px] lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass order-2 rounded-lg p-5 shadow-glow lg:order-1">
+        <div class="mb-5 flex items-center justify-between gap-3">
+          <div>
+            <h2 class="text-xl font-bold text-white">Scenario Inputs</h2>
+            <p class="mt-1 text-sm text-slate-400">Tune the agent workload and pick any live model.</p>
+          </div>
+          <button id="refreshBtn" class="rounded-md border border-indigo-400/30 bg-indigo-500/15 px-3 py-2 text-sm font-semibold text-indigo-100 transition hover:bg-indigo-500/25">Refresh</button>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold text-slate-300">Vendor</span>
+            <select id="vendorSelect" class="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2.5 text-sm outline-none ring-emerald-400/40 focus:ring-2"></select>
+          </label>
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold text-slate-300">Model</span>
+            <select id="modelSelect" class="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2.5 text-sm outline-none ring-emerald-400/40 focus:ring-2"></select>
+          </label>
+        </div>
+
+        <div class="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
+          <button data-preset="lean" class="presetBtn rounded-md border border-slate-700 bg-slate-950/70 px-3 py-2 text-xs font-bold text-slate-200 transition hover:border-emerald-400/50 hover:text-emerald-100">Lean Agent</button>
+          <button data-preset="rag" class="presetBtn rounded-md border border-slate-700 bg-slate-950/70 px-3 py-2 text-xs font-bold text-slate-200 transition hover:border-emerald-400/50 hover:text-emerald-100">RAG Support</button>
+          <button data-preset="reasoning" class="presetBtn rounded-md border border-slate-700 bg-slate-950/70 px-3 py-2 text-xs font-bold text-slate-200 transition hover:border-emerald-400/50 hover:text-emerald-100">Reasoning Heavy</button>
+          <button data-preset="scale" class="presetBtn rounded-md border border-slate-700 bg-slate-950/70 px-3 py-2 text-xs font-bold text-slate-200 transition hover:border-emerald-400/50 hover:text-emerald-100">Scale Test</button>
+        </div>
+
+        <div class="mt-5 rounded-lg border border-emerald-400/20 bg-emerald-400/10 p-4">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <h3 class="text-sm font-bold text-white">Workflow Examples</h3>
+              <p class="mt-1 text-xs leading-5 text-emerald-50/80">Not sure what token settings mean? Pick a real AI product workflow, preview the assumptions, then apply it to the calculator.</p>
+            </div>
+            <span id="modelCountBadge" class="shrink-0 rounded-full border border-emerald-300/25 bg-slate-950/50 px-2.5 py-1 text-xs font-bold text-emerald-100">Loading models</span>
+          </div>
+          <div id="workflowCards" class="mt-4 grid gap-2 sm:grid-cols-2"></div>
+        </div>
+
+        <div class="mt-5 space-y-5">
+          <div class="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
+            <div class="mb-3 flex items-center justify-between">
+              <label for="inputTokens" class="text-sm font-semibold text-slate-200">Input Tokens: Base Context</label>
+              <input id="inputTokensNumber" type="number" min="100" max="1000000" step="100" class="w-28 rounded-md border border-slate-700 bg-slate-950 px-2 py-1.5 text-right text-sm">
+            </div>
+            <input id="inputTokens" type="range" min="100" max="200000" step="100" class="w-full">
+          </div>
+
+          <div class="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
+            <div class="mb-3 flex items-center justify-between">
+              <label for="outputTokens" class="text-sm font-semibold text-slate-200">Output Tokens: Visible Response</label>
+              <input id="outputTokensNumber" type="number" min="50" max="250000" step="50" class="w-28 rounded-md border border-slate-700 bg-slate-950 px-2 py-1.5 text-right text-sm">
+            </div>
+            <input id="outputTokens" type="range" min="50" max="50000" step="50" class="w-full">
+          </div>
+
+          <div class="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
+            <div class="mb-3 flex items-start justify-between gap-3">
+              <div>
+                <label for="reasoningToggle" class="text-sm font-semibold text-slate-200">Reasoning / Thinking Tokens</label>
+                <p id="reasoningHint" class="mt-1 text-xs text-slate-400">Adds hidden tokens billed at the input rate.</p>
+              </div>
+              <button id="reasoningToggle" role="switch" aria-checked="true" class="relative h-7 w-12 rounded-full bg-emerald-500 transition">
+                <span class="absolute right-1 top-1 h-5 w-5 rounded-full bg-white transition"></span>
+              </button>
+            </div>
+            <div class="flex items-center gap-3">
+              <input id="reasoningMultiplier" type="range" min="0" max="8" step="0.25" class="w-full">
+              <span id="reasoningMultiplierValue" class="w-16 rounded-md bg-slate-900 px-2 py-1 text-center text-sm font-bold text-emerald-200"></span>
+            </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
+              <div class="mb-3 flex items-center justify-between">
+                <label for="cacheHit" class="text-sm font-semibold text-slate-200">Prompt Cache Hit Rate</label>
+                <span id="cacheHitValue" class="text-sm font-bold text-emerald-200"></span>
+              </div>
+              <input id="cacheHit" type="range" min="0" max="100" step="1" class="w-full">
+              <p id="cacheSupport" class="mt-2 text-xs text-slate-400"></p>
+            </div>
+            <div class="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
+              <div class="mb-3 flex items-center justify-between">
+                <label for="turns" class="text-sm font-semibold text-slate-200">Agent Loops / Turns</label>
+                <span id="turnsValue" class="text-sm font-bold text-indigo-200"></span>
+              </div>
+              <input id="turns" type="range" min="1" max="10" step="1" class="w-full">
+              <p class="mt-2 text-xs text-slate-400">Context grows linearly each turn.</p>
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-slate-800 bg-slate-950/40 p-4">
+            <div class="mb-3 flex items-center justify-between">
+              <label for="monthlyCalls" class="text-sm font-semibold text-slate-200">Monthly Volume / Calls</label>
+              <input id="monthlyCallsNumber" type="number" min="1" max="100000000" step="100" class="w-32 rounded-md border border-slate-700 bg-slate-950 px-2 py-1.5 text-right text-sm">
+            </div>
+            <input id="monthlyCalls" type="range" min="1" max="1000000" step="100" class="w-full">
+          </div>
+        </div>
+      </div>
+
+      <div class="order-1 space-y-5 lg:order-2">
+        <div class="glass rounded-lg p-5 shadow-glow">
+          <div class="mb-5 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <h2 class="text-xl font-bold text-white">Real-Time Cost Readout</h2>
+              <p id="selectedModelMeta" class="mt-1 text-sm text-slate-400"></p>
+            </div>
+            <div class="rounded-md border border-emerald-400/25 bg-emerald-400/10 px-3 py-2 text-right">
+              <div class="text-xs font-semibold uppercase tracking-wide text-emerald-200">Monthly Estimate</div>
+              <div id="monthlyCost" class="text-2xl font-extrabold text-white">$0.00</div>
+            </div>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div class="metric rounded-lg p-4">
+              <div class="text-xs font-semibold uppercase tracking-wide text-slate-400">Per Agent Run</div>
+              <div id="runCost" class="mt-2 text-2xl font-bold text-white">$0.00</div>
+            </div>
+            <div class="metric rounded-lg p-4">
+              <div class="text-xs font-semibold uppercase tracking-wide text-slate-400">Input + Cache</div>
+              <div id="inputCost" class="mt-2 text-2xl font-bold text-emerald-200">$0.00</div>
+            </div>
+            <div class="metric rounded-lg p-4">
+              <div class="text-xs font-semibold uppercase tracking-wide text-slate-400">Visible Output</div>
+              <div id="outputCost" class="mt-2 text-2xl font-bold text-indigo-200">$0.00</div>
+            </div>
+            <div class="metric rounded-lg p-4">
+              <div class="text-xs font-semibold uppercase tracking-wide text-slate-400">Hidden Reasoning</div>
+              <div id="reasoningCost" class="mt-2 text-2xl font-bold text-amber-200">$0.00</div>
+            </div>
+          </div>
+
+          <div class="mt-5 grid gap-3 sm:grid-cols-3">
+            <div class="rounded-md bg-slate-950/50 p-3 text-sm text-slate-300">
+              <span class="block text-xs font-semibold uppercase text-slate-500">Effective Tokens / Run</span>
+              <strong id="effectiveTokens" class="mt-1 block text-lg text-white">0</strong>
+            </div>
+            <div class="rounded-md bg-slate-950/50 p-3 text-sm text-slate-300">
+              <span class="block text-xs font-semibold uppercase text-slate-500">Cache Savings / Run</span>
+              <strong id="cacheSavings" class="mt-1 block text-lg text-emerald-200">$0.00</strong>
+            </div>
+            <div class="rounded-md bg-slate-950/50 p-3 text-sm text-slate-300">
+              <span class="block text-xs font-semibold uppercase text-slate-500">Avg Cost / Turn</span>
+              <strong id="avgTurnCost" class="mt-1 block text-lg text-white">$0.00</strong>
+            </div>
+          </div>
+          <div id="scenarioSummary" class="mt-5 rounded-lg border border-indigo-400/20 bg-indigo-400/10 p-4 text-sm leading-6 text-indigo-50"></div>
+          <div class="mt-4 rounded-lg border border-slate-800 bg-slate-950/45 p-4">
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-white">Share This Result</h3>
+                <p class="mt-1 text-xs text-slate-400">Copy a post that explains the savings and brings people back to the calculator.</p>
+              </div>
+              <button id="copyShareBlurbBtn" class="rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-xs font-bold text-slate-100 transition hover:bg-slate-800">Copy Share Blurb</button>
+            </div>
+            <p id="shareBlurbText" class="mt-3 text-sm leading-6 text-slate-300"></p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <button id="copyXPostBtn" class="rounded-md border border-emerald-400/30 bg-emerald-500/15 px-3 py-2 text-xs font-bold text-emerald-100 transition hover:bg-emerald-500/25">Copy X Post</button>
+              <button id="copyLinkedInPostBtn" class="rounded-md border border-indigo-400/30 bg-indigo-500/15 px-3 py-2 text-xs font-bold text-indigo-100 transition hover:bg-indigo-500/25">Copy LinkedIn Post</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-lg p-5 shadow-glow">
+          <div class="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 class="text-xl font-bold text-white">Flagship Model Comparison</h2>
+              <p class="text-sm text-slate-400">Same scenario across live-loaded alternatives.</p>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wide text-slate-500">Cost per agent run</span>
+          </div>
+          <div class="h-72">
+            <canvas id="comparisonChart"></canvas>
+          </div>
+        </div>
+
+        <div id="advisorBox" class="rounded-lg border p-5 shadow-glow transition">
+          <div class="mb-2 flex items-center gap-2">
+            <span id="advisorIcon" class="inline-flex h-8 w-8 items-center justify-center rounded-md text-lg"></span>
+            <h2 id="advisorTitle" class="text-lg font-bold text-white"></h2>
+          </div>
+          <p id="advisorText" class="text-sm leading-6 text-slate-300"></p>
+        </div>
+      </div>
+
+      <aside class="order-3 space-y-5 lg:col-span-2 xl:col-span-1">
+        <div class="rounded-lg border border-slate-800 bg-slate-950/55 p-4">
+          <h3 class="text-sm font-bold text-white">Methodology Notes</h3>
+          <p class="mt-2 text-xs leading-5 text-slate-400">Calculator outputs are estimates, not invoices. Token prices, cache discounts, taxes, enterprise terms, regional pricing, and tool fees should be verified with official provider sources before budget decisions.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="mt-5 glass rounded-lg p-5 shadow-glow">
+      <div class="mb-4 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <div class="mb-2 inline-flex items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-amber-200">Historical Trend</div>
+          <h2 class="text-xl font-bold text-white">📉 AI Price Wars: Historical Trend Tracker</h2>
+          <p class="mt-1 text-sm text-slate-400">See how competition is driving down your SaaS infra costs.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <span id="trendModeLabel" class="text-xs font-semibold uppercase tracking-wide text-slate-500">Input Token Price Trend</span>
+          <button id="trendModeToggle" role="switch" aria-checked="false" class="relative h-7 w-12 rounded-full bg-slate-700 transition">
+            <span class="absolute left-1 top-1 h-5 w-5 rounded-full bg-white transition"></span>
+          </button>
+        </div>
+      </div>
+      <div class="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
+        <div class="rounded-lg border border-slate-800 bg-slate-950/45 p-4">
+          <div class="mb-3 grid gap-2 sm:grid-cols-3 text-xs font-semibold text-slate-400">
+            <div class="rounded-md border border-slate-800 bg-slate-900/70 px-3 py-2 text-slate-200">OpenAI flagship</div>
+            <div class="rounded-md border border-slate-800 bg-slate-900/70 px-3 py-2 text-slate-200">Anthropic Claude</div>
+            <div class="rounded-md border border-slate-800 bg-slate-900/70 px-3 py-2 text-slate-200">DeepSeek disruptor</div>
+          </div>
+          <div class="h-80">
+            <canvas id="historicalTrendChart"></canvas>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="rounded-lg border border-slate-800 bg-slate-950/45 p-4">
+            <h3 class="text-sm font-bold text-white">Milestone Logic</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">This chart is intentionally opinionated: flagship prices start high, then flatten as competition and efficiency pressure kick in. Switch the toggle to compare input versus output pricing.</p>
+          </div>
+          <div class="rounded-lg border border-slate-800 bg-slate-950/45 p-4 text-sm leading-6 text-slate-300">
+            <p class="font-semibold text-white">What to read</p>
+            <p class="mt-2">OpenAI shows the sharpest mainstream compression, Anthropic illustrates premium reasoning pricing falling into the same band, and DeepSeek makes the floor visible by entering far below western flagship pricing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5 glass rounded-lg p-5 shadow-glow">
+      <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-white">Popular AI Cost Questions</h2>
+          <p class="mt-1 text-sm text-slate-400">Fast answers for builders comparing model pricing, agent loops, and creator tool spend.</p>
+        </div>
+        <a href="/ai-cost-guides/" class="text-sm font-semibold text-emerald-200 hover:text-emerald-100">Read all guides</a>
+      </div>
+      <div class="grid gap-3 lg:grid-cols-3">
+        <details class="rounded-lg border border-slate-800 bg-slate-950/45 p-4">
+          <summary class="cursor-pointer text-sm font-bold text-white">How do I estimate AI agent cost?</summary>
+          <p class="mt-2 text-sm leading-6 text-slate-300">Start with input tokens, output tokens, reasoning multiplier, cache hit rate, agent turns, and monthly calls. The calculator converts those assumptions into per-run and monthly cost.</p>
+        </details>
+        <details class="rounded-lg border border-slate-800 bg-slate-950/45 p-4">
+          <summary class="cursor-pointer text-sm font-bold text-white">Which model is cheapest for agent workflows?</summary>
+          <p class="mt-2 text-sm leading-6 text-slate-300">It depends on output size, cache support, and reasoning depth. Use the comparison chart to test GPT, Claude, Gemini, DeepSeek, Qwen, and other loaded models with the same workflow.</p>
+        </details>
+        <details class="rounded-lg border border-slate-800 bg-slate-950/45 p-4">
+          <summary class="cursor-pointer text-sm font-bold text-white">Can creators estimate AI video, voice, and music spend?</summary>
+          <p class="mt-2 text-sm leading-6 text-slate-300">Yes. Use the creator calculators for AI music, video, voice, SaaS profit, and channel profit planning with USD, RMB, and MYR assumptions.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mt-5 glass rounded-lg p-5 shadow-glow">
+      <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-white">Indexable Model Pages</h2>
+          <p class="mt-1 text-sm text-slate-400">Search-focused pages built for the models people compare most often.</p>
+        </div>
+        <span class="text-xs font-semibold uppercase tracking-wide text-slate-500">Free organic traffic</span>
+      </div>
+      <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <a href="/ai-agent-cost-calculator.html" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70">
+          <div class="text-xs font-bold uppercase tracking-wide text-emerald-200">General</div>
+          <div class="mt-2 text-lg font-bold text-white">AI Agent Cost Calculator</div>
+          <p class="mt-2 text-sm leading-6 text-slate-300">High-intent landing page for generic searches around token cost, agent loops, and routing savings.</p>
+        </a>
+        <a href="/openai-ai-agent-cost-calculator.html" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70">
+          <div class="text-xs font-bold uppercase tracking-wide text-indigo-200">OpenAI</div>
+          <div class="mt-2 text-lg font-bold text-white">GPT Pricing Calculator</div>
+          <p class="mt-2 text-sm leading-6 text-slate-300">Targets searches for GPT-4o, GPT-4.1, reasoning models, and agent workflow cost estimates.</p>
+        </a>
+        <a href="/claude-ai-agent-cost-calculator.html" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70">
+          <div class="text-xs font-bold uppercase tracking-wide text-violet-200">Anthropic</div>
+          <div class="mt-2 text-lg font-bold text-white">Claude Cost Calculator</div>
+          <p class="mt-2 text-sm leading-6 text-slate-300">Built for Claude Sonnet, Opus, and long-context workflow economics.</p>
+        </a>
+        <a href="/deepseek-ai-agent-cost-calculator.html" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70">
+          <div class="text-xs font-bold uppercase tracking-wide text-amber-200">China Models</div>
+          <div class="mt-2 text-lg font-bold text-white">DeepSeek + Qwen Comparisons</div>
+          <p class="mt-2 text-sm leading-6 text-slate-300">Captures lower-cost search demand around DeepSeek, Qwen, Kimi, and related models.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-5 glass rounded-lg p-5 shadow-glow">
+      <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-white">AI Creator & SaaS Hub</h2>
+          <p class="mt-1 text-sm text-slate-400">New calculators for music, video, voice, SaaS margins, and creator profit planning.</p>
+        </div>
+        <span class="text-xs font-semibold uppercase tracking-wide text-slate-500">Manual pricing + local storage</span>
+      </div>
+      <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+        <a href="/music-cost-calculator/" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70"><div class="text-xs font-bold uppercase tracking-wide text-emerald-200">Music</div><div class="mt-2 text-lg font-bold text-white">AI Music Cost Calculator</div><p class="mt-2 text-sm leading-6 text-slate-300">Suno, Udio, Stable Audio, ElevenLabs Music, Mureka, and China music tools.</p></a>
+        <a href="/ai-video-cost-calculator/" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70"><div class="text-xs font-bold uppercase tracking-wide text-indigo-200">Video</div><div class="mt-2 text-lg font-bold text-white">AI Video Cost Calculator</div><p class="mt-2 text-sm leading-6 text-slate-300">Runway, Pika, Luma, Kling, Hailuo, Vidu, Synthesia, Sora, and Veo planning.</p></a>
+        <a href="/ai-voice-cost-calculator/" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70"><div class="text-xs font-bold uppercase tracking-wide text-violet-200">Voice</div><div class="mt-2 text-lg font-bold text-white">AI Voice / Dubbing Calculator</div><p class="mt-2 text-sm leading-6 text-slate-300">ElevenLabs, Murf, PlayHT, Azure, Google, OpenAI, Minimax, Tencent, and Alibaba.</p></a>
+        <a href="/ai-saas-profit-calculator/" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70"><div class="text-xs font-bold uppercase tracking-wide text-amber-200">SaaS</div><div class="mt-2 text-lg font-bold text-white">AI SaaS Profit Calculator</div><p class="mt-2 text-sm leading-6 text-slate-300">Revenue, API burn, churn, break-even users, and pricing tiers.</p></a>
+        <a href="/creator-profit-calculator/" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70"><div class="text-xs font-bold uppercase tracking-wide text-rose-200">Creator</div><div class="mt-2 text-lg font-bold text-white">Creator Profit Calculator</div><p class="mt-2 text-sm leading-6 text-slate-300">Model AI-assisted YouTube, TikTok, and Shorts workflows.</p></a>
+        <a href="/china-ai-tools-cost-calculator/" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70"><div class="text-xs font-bold uppercase tracking-wide text-cyan-200">China</div><div class="mt-2 text-lg font-bold text-white">China AI Tools Calculator</div><p class="mt-2 text-sm leading-6 text-slate-300">Regional comparison for China-based creator platforms with RMB planning.</p></a>
+        <a href="/ai-tool-cost-comparison/" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70"><div class="text-xs font-bold uppercase tracking-wide text-slate-200">Compare</div><div class="mt-2 text-lg font-bold text-white">AI Tool Cost Comparison</div><p class="mt-2 text-sm leading-6 text-slate-300">Searchable comparison view for all creator tooling categories.</p></a>
+        <a href="/ai-cost-guides/" class="rounded-lg border border-slate-800 bg-slate-950/50 p-4 transition hover:border-emerald-400/35 hover:bg-slate-900/70"><div class="text-xs font-bold uppercase tracking-wide text-emerald-200">Guides</div><div class="mt-2 text-lg font-bold text-white">AI Cost Guides</div><p class="mt-2 text-sm leading-6 text-slate-300">Free SEO guide hub that links every calculator and explains cost planning basics.</p></a>
+      </div>
+    </section>
+  </main>
+
+  <div id="workflowModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 px-4 backdrop-blur-sm">
+    <div class="w-full max-w-xl rounded-lg border border-slate-700 bg-slate-950 p-5 shadow-glow">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div id="workflowModalKicker" class="text-xs font-bold uppercase tracking-wide text-emerald-300"></div>
+          <h2 id="workflowModalTitle" class="mt-1 text-2xl font-extrabold text-white"></h2>
+        </div>
+        <button id="workflowCloseBtn" class="rounded-md border border-slate-700 px-3 py-1.5 text-sm font-bold text-slate-300 hover:bg-slate-800">Close</button>
+      </div>
+      <p id="workflowModalText" class="mt-4 text-sm leading-6 text-slate-300"></p>
+      <div id="workflowModalStats" class="mt-4 grid gap-2 sm:grid-cols-3"></div>
+      <div class="mt-5 flex flex-col gap-2 sm:flex-row sm:justify-end">
+        <button id="workflowApplyBtn" class="rounded-md border border-emerald-400/30 bg-emerald-500/15 px-4 py-2 text-sm font-bold text-emerald-100 hover:bg-emerald-500/25">Apply Workflow</button>
+        <button id="workflowCopyBtn" class="rounded-md border border-slate-700 bg-slate-900 px-4 py-2 text-sm font-bold text-slate-100 hover:bg-slate-800">Copy Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fallbackVendorFiles = ["amazon.json", "anthropic.json", "deepseek.json", "google.json", "minimax.json", "mistral.json", "moonshot-ai.json", "openai.json", "qwen.json", "xai.json"];
+      const rawBase = "https://raw.githubusercontent.com/simonw/llm-prices/main/data/";
+      const contentsUrl = "https://api.github.com/repos/simonw/llm-prices/contents/data";
+      const commitUrl = "https://api.github.com/repos/simonw/llm-prices/commits?path=data&per_page=1";
+            /* PRICE_FALLBACK_START */
+      const fallbackData = [
+  {
+    "vendor": "amazon",
+    "models": [
+      {
+        "id": "amazon-nova-micro",
+        "name": "Amazon Nova Micro",
+        "input": 0.035,
+        "output": 0.14,
+        "input_cached": null
+      },
+      {
+        "id": "amazon-nova-lite",
+        "name": "Amazon Nova Lite",
+        "input": 0.06,
+        "output": 0.24,
+        "input_cached": null
+      },
+      {
+        "id": "amazon-nova-pro",
+        "name": "Amazon Nova Pro",
+        "input": 0.8,
+        "output": 3.2,
+        "input_cached": null
+      },
+      {
+        "id": "amazon-nova-premier",
+        "name": "Amazon Nova Premier",
+        "input": 2.5,
+        "output": 12.5,
+        "input_cached": null
+      }
+    ]
+  },
+  {
+    "vendor": "anthropic",
+    "models": [
+      {
+        "id": "claude-3.7-sonnet",
+        "name": "Claude 3.7 Sonnet",
+        "input": 3,
+        "output": 15,
+        "input_cached": null
+      },
+      {
+        "id": "claude-3.5-sonnet",
+        "name": "Claude 3.5 Sonnet",
+        "input": 3,
+        "output": 15,
+        "input_cached": null
+      },
+      {
+        "id": "claude-3-opus",
+        "name": "Claude 3 Opus",
+        "input": 15,
+        "output": 75,
+        "input_cached": null
+      },
+      {
+        "id": "claude-3-haiku",
+        "name": "Claude 3 Haiku",
+        "input": 0.25,
+        "output": 1.25,
+        "input_cached": null
+      },
+      {
+        "id": "claude-3.5-haiku",
+        "name": "Claude 3.5 Haiku",
+        "input": 0.8,
+        "output": 4,
+        "input_cached": null
+      },
+      {
+        "id": "claude-4.5-haiku",
+        "name": "Claude 4.5 Haiku",
+        "input": 1,
+        "output": 5,
+        "input_cached": null
+      },
+      {
+        "id": "claude-sonnet-4.5",
+        "name": "Claude Sonnet 4 and 4.5 ≤200k",
+        "input": 3,
+        "output": 15,
+        "input_cached": null
+      },
+      {
+        "id": "claude-sonnet-4.5-200k",
+        "name": "Claude Sonnet 4 and 4.5 >200k",
+        "input": 6,
+        "output": 22.5,
+        "input_cached": null
+      },
+      {
+        "id": "claude-opus-4",
+        "name": "Claude Opus 4",
+        "input": 15,
+        "output": 75,
+        "input_cached": null
+      },
+      {
+        "id": "claude-opus-4-1",
+        "name": "Claude Opus 4.1",
+        "input": 15,
+        "output": 75,
+        "input_cached": null
+      },
+      {
+        "id": "claude-opus-4-5",
+        "name": "Claude Opus 4.5",
+        "input": 5,
+        "output": 25,
+        "input_cached": null
+      },
+      {
+        "id": "claude-opus-4-6",
+        "name": "Claude Opus 4.6",
+        "input": 5,
+        "output": 25,
+        "input_cached": null
+      },
+      {
+        "id": "claude-opus-4-7",
+        "name": "Claude Opus 4.7",
+        "input": 5,
+        "output": 25,
+        "input_cached": null
+      },
+      {
+        "id": "claude-opus-4-8",
+        "name": "Claude Opus 4.8",
+        "input": 5,
+        "output": 25,
+        "input_cached": null
+      },
+      {
+        "id": "claude-fable-5",
+        "name": "Claude Fable 5",
+        "input": 10,
+        "output": 50,
+        "input_cached": null
+      },
+      {
+        "id": "claude-mythos-5",
+        "name": "Claude Mythos 5",
+        "input": 10,
+        "output": 50,
+        "input_cached": null
+      }
+    ]
+  },
+  {
+    "vendor": "deepseek",
+    "models": [
+      {
+        "id": "deepseek-v4-flash",
+        "name": "DeepSeek-V4-Flash",
+        "input": 0.14,
+        "output": 0.28,
+        "input_cached": 0.028
+      },
+      {
+        "id": "deepseek-v4-pro",
+        "name": "DeepSeek-V4-Pro",
+        "input": 1.74,
+        "output": 3.48,
+        "input_cached": 0.145
+      },
+      {
+        "id": "deepseek-chat",
+        "name": "DeepSeek Chat",
+        "input": 0.27,
+        "output": 1.1,
+        "input_cached": null
+      },
+      {
+        "id": "deepseek-reasoner",
+        "name": "DeepSeek Reasoner",
+        "input": 0.55,
+        "output": 2.19,
+        "input_cached": null
+      }
+    ]
+  },
+  {
+    "vendor": "google",
+    "models": [
+      {
+        "id": "gemini-2.5-pro-preview-03-25",
+        "name": "Gemini 2.5 Pro Preview ≤200k",
+        "input": 1.25,
+        "output": 10,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-2.5-pro-preview-03-25-200k",
+        "name": "Gemini 2.5 Pro Preview >200k",
+        "input": 2.5,
+        "output": 15,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-2.0-flash-lite",
+        "name": "Gemini 2.0 Flash Lite",
+        "input": 0.075,
+        "output": 0.3,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-2.0-flash",
+        "name": "Gemini 2.0 Flash",
+        "input": 0.1,
+        "output": 0.4,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-1.5-flash",
+        "name": "Gemini 1.5 Flash ≤128k",
+        "input": 0.075,
+        "output": 0.3,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-1.5-flash-128k",
+        "name": "Gemini 1.5 Flash >128k",
+        "input": 0.15,
+        "output": 0.6,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-1.5-flash-8b",
+        "name": "Gemini 1.5 Flash-8B ≤128k",
+        "input": 0.0375,
+        "output": 0.15,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-1.5-flash-8b-128k",
+        "name": "Gemini 1.5 Flash-8B >128k",
+        "input": 0.075,
+        "output": 0.3,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-1.5-pro",
+        "name": "Gemini 1.5 Pro ≤128k",
+        "input": 1.25,
+        "output": 5,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-1.5-pro-128k",
+        "name": "Gemini 1.5 Pro >128k",
+        "input": 2.5,
+        "output": 10,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-2.5-flash",
+        "name": "Gemini 2.5 Flash",
+        "input": 0.3,
+        "output": 2.5,
+        "input_cached": 0.03
+      },
+      {
+        "id": "gemini-2.5-flash-lite",
+        "name": "Gemini 2.5 Flash-Lite",
+        "input": 0.1,
+        "output": 0.4,
+        "input_cached": 0.01
+      },
+      {
+        "id": "gemini-2.5-flash-preview-09-2025",
+        "name": "Gemini 2.5 Flash Preview (09-2025)",
+        "input": 0.3,
+        "output": 2.5,
+        "input_cached": 0.03
+      },
+      {
+        "id": "gemini-2.5-pro",
+        "name": "Gemini 2.5 Pro ≤200k",
+        "input": 1.25,
+        "output": 10,
+        "input_cached": 0.125
+      },
+      {
+        "id": "gemini-2.5-pro-200k",
+        "name": "Gemini 2.5 Pro >200k",
+        "input": 2.5,
+        "output": 15,
+        "input_cached": 0.25
+      },
+      {
+        "id": "gemini-3-pro-preview",
+        "name": "Gemini 3 Pro ≤200k",
+        "input": 2,
+        "output": 12,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-3-pro-preview-200k",
+        "name": "Gemini 3 Pro >200k",
+        "input": 4,
+        "output": 18,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-3-flash-preview",
+        "name": "Gemini 3 Flash Preview",
+        "input": 0.5,
+        "output": 3,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-3-1-pro-preview",
+        "name": "Gemini 3.1 Pro ≤200k",
+        "input": 2,
+        "output": 12,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-3-1-pro-preview-200k",
+        "name": "Gemini 3.1 Pro >200k",
+        "input": 4,
+        "output": 18,
+        "input_cached": null
+      },
+      {
+        "id": "gemini-3.1-flash-lite-preview",
+        "name": "Gemini 3.1 Flash-Lite",
+        "input": 0.25,
+        "output": 1.5,
+        "input_cached": 0.025
+      },
+      {
+        "id": "gemini-3.5-flash",
+        "name": "Gemini 3.5 Flash",
+        "input": 1.5,
+        "output": 9,
+        "input_cached": 0.15
+      }
+    ]
+  },
+  {
+    "vendor": "minimax",
+    "models": [
+      {
+        "id": "minimax-m2",
+        "name": "MiniMax M2",
+        "input": 0.3,
+        "output": 1.2,
+        "input_cached": null
+      }
+    ]
+  },
+  {
+    "vendor": "mistral",
+    "models": [
+      {
+        "id": "pixtral-12b",
+        "name": "Pixtral 12B",
+        "input": 0.15,
+        "output": 0.15,
+        "input_cached": null
+      },
+      {
+        "id": "mistral-small-latest",
+        "name": "Mistral Small 3.1",
+        "input": 0.1,
+        "output": 0.3,
+        "input_cached": null
+      },
+      {
+        "id": "mistral-medium-2505",
+        "name": "Mistral Medium 3",
+        "input": 0.4,
+        "output": 2,
+        "input_cached": null
+      },
+      {
+        "id": "mistral-nemo",
+        "name": "Mistral NeMo",
+        "input": 0.15,
+        "output": 0.15,
+        "input_cached": null
+      },
+      {
+        "id": "open-mistral-7b",
+        "name": "Mistral 7B",
+        "input": 0.25,
+        "output": 0.25,
+        "input_cached": null
+      },
+      {
+        "id": "open-mixtral-8x7b",
+        "name": "Mixtral 8x7B",
+        "input": 0.7,
+        "output": 0.7,
+        "input_cached": null
+      },
+      {
+        "id": "open-mixtral-8x22b",
+        "name": "Mixtral 8x22B",
+        "input": 2,
+        "output": 6,
+        "input_cached": null
+      },
+      {
+        "id": "mistral-large-latest",
+        "name": "Mistral Large 24.11",
+        "input": 2,
+        "output": 6,
+        "input_cached": null
+      },
+      {
+        "id": "pixtral-large-latest",
+        "name": "Pixtral Large",
+        "input": 2,
+        "output": 6,
+        "input_cached": null
+      },
+      {
+        "id": "mistral-saba-latest",
+        "name": "Mistral Saba",
+        "input": 0.2,
+        "output": 0.6,
+        "input_cached": null
+      },
+      {
+        "id": "codestral-latest",
+        "name": "Codestral",
+        "input": 0.3,
+        "output": 0.9,
+        "input_cached": null
+      },
+      {
+        "id": "ministral-8b-latest",
+        "name": "Ministral 8B 24.10",
+        "input": 0.1,
+        "output": 0.1,
+        "input_cached": null
+      },
+      {
+        "id": "ministral-3b-latest",
+        "name": "Ministral 3B 24.10",
+        "input": 0.04,
+        "output": 0.04,
+        "input_cached": null
+      },
+      {
+        "id": "magistral-medium-latest",
+        "name": "Magistral Medium",
+        "input": 2,
+        "output": 5,
+        "input_cached": null
+      }
+    ]
+  },
+  {
+    "vendor": "moonshot-ai",
+    "models": [
+      {
+        "id": "kimi-k2-0905-preview",
+        "name": "Kimi K2 0905 Preview",
+        "input": 0.6,
+        "output": 2.5,
+        "input_cached": 0.15
+      },
+      {
+        "id": "kimi-k2-0711-preview",
+        "name": "Kimi K2 0711 Preview",
+        "input": 0.6,
+        "output": 2.5,
+        "input_cached": 0.15
+      },
+      {
+        "id": "kimi-k2-turbo-preview",
+        "name": "Kimi K2 Turbo Preview",
+        "input": 1.15,
+        "output": 8,
+        "input_cached": 0.15
+      },
+      {
+        "id": "kimi-k2-thinking",
+        "name": "Kimi K2 Thinking",
+        "input": 0.6,
+        "output": 2.5,
+        "input_cached": 0.15
+      },
+      {
+        "id": "kimi-k2-thinking-turbo",
+        "name": "Kimi K2 Thinking Turbo",
+        "input": 1.15,
+        "output": 8,
+        "input_cached": 0.15
+      }
+    ]
+  },
+  {
+    "vendor": "openai",
+    "models": [
+      {
+        "id": "text-davinci-003",
+        "name": "GPT-3 Text Davinci 003",
+        "input": 20,
+        "output": 20,
+        "input_cached": null
+      },
+      {
+        "id": "gpt-4.5",
+        "name": "GPT-4.5",
+        "input": 75,
+        "output": 150,
+        "input_cached": 37.5
+      },
+      {
+        "id": "gpt-4o",
+        "name": "GPT-4o",
+        "input": 2.5,
+        "output": 10,
+        "input_cached": 1.25
+      },
+      {
+        "id": "gpt-4o-mini",
+        "name": "GPT-4o Mini",
+        "input": 0.15,
+        "output": 0.6,
+        "input_cached": 0.075
+      },
+      {
+        "id": "chatgpt-4o-latest",
+        "name": "ChatGPT 4o Latest",
+        "input": 5,
+        "output": 15,
+        "input_cached": null
+      },
+      {
+        "id": "o1-preview",
+        "name": "o1 and o1-preview",
+        "input": 15,
+        "output": 60,
+        "input_cached": 7.5
+      },
+      {
+        "id": "o1-pro",
+        "name": "o1 Pro",
+        "input": 150,
+        "output": 600,
+        "input_cached": null
+      },
+      {
+        "id": "o1-mini",
+        "name": "o1-mini",
+        "input": 1.1,
+        "output": 4.4,
+        "input_cached": 0.55
+      },
+      {
+        "id": "o3-mini",
+        "name": "o3-mini",
+        "input": 1.1,
+        "output": 4.4,
+        "input_cached": 0.55
+      },
+      {
+        "id": "gpt-4.1",
+        "name": "GPT-4.1",
+        "input": 2,
+        "output": 8,
+        "input_cached": 0.5
+      },
+      {
+        "id": "gpt-4.1-mini",
+        "name": "GPT-4.1 Mini",
+        "input": 0.4,
+        "output": 1.6,
+        "input_cached": 0.1
+      },
+      {
+        "id": "gpt-4.1-nano",
+        "name": "GPT-4.1 Nano",
+        "input": 0.1,
+        "output": 0.4,
+        "input_cached": 0.025
+      },
+      {
+        "id": "o3",
+        "name": "o3",
+        "input": 10,
+        "output": 40,
+        "input_cached": 0.5
+      },
+      {
+        "id": "o4-mini",
+        "name": "o4-mini",
+        "input": 1.1,
+        "output": 4.4,
+        "input_cached": 0.275
+      },
+      {
+        "id": "gpt-5-nano",
+        "name": "GPT-5 Nano",
+        "input": 0.05,
+        "output": 0.4,
+        "input_cached": 0.005
+      },
+      {
+        "id": "gpt-5-mini",
+        "name": "GPT-5 Mini",
+        "input": 0.25,
+        "output": 2,
+        "input_cached": 0.025
+      },
+      {
+        "id": "gpt-5",
+        "name": "GPT-5",
+        "input": 1.25,
+        "output": 10,
+        "input_cached": 0.125
+      },
+      {
+        "id": "gpt-image-1",
+        "name": "gpt-image-1 (image gen)",
+        "input": 10,
+        "output": 40,
+        "input_cached": 1.25
+      },
+      {
+        "id": "gpt-image-1-mini",
+        "name": "gpt-image-1-mini (image gen)",
+        "input": 2,
+        "output": 8,
+        "input_cached": 0.2
+      },
+      {
+        "id": "gpt-image-2-image",
+        "name": "gpt-image-2 (image gen) image tokens",
+        "input": 8,
+        "output": 30,
+        "input_cached": 2
+      },
+      {
+        "id": "gpt-image-2-text",
+        "name": "gpt-image-2 (image gen) text tokens",
+        "input": 5,
+        "output": 10,
+        "input_cached": 1.25
+      },
+      {
+        "id": "gpt-5-pro",
+        "name": "GPT-5 Pro",
+        "input": 15,
+        "output": 120,
+        "input_cached": null
+      },
+      {
+        "id": "o3-pro",
+        "name": "o3 Pro",
+        "input": 20,
+        "output": 80,
+        "input_cached": null
+      },
+      {
+        "id": "o4-mini-deep-research",
+        "name": "o4-mini Deep Research",
+        "input": 2,
+        "output": 8,
+        "input_cached": 0.5
+      },
+      {
+        "id": "o3-deep-research",
+        "name": "o3 Deep Research",
+        "input": 10,
+        "output": 40,
+        "input_cached": 2.5
+      },
+      {
+        "id": "gpt-5.1-codex-mini",
+        "name": "GPT-5.1 Codex mini",
+        "input": 0.25,
+        "output": 2,
+        "input_cached": 0.025
+      },
+      {
+        "id": "gpt-5.1-codex",
+        "name": "GPT-5.1 Codex",
+        "input": 1.25,
+        "output": 10,
+        "input_cached": 0.125
+      },
+      {
+        "id": "gpt-5.1",
+        "name": "GPT-5.1",
+        "input": 1.25,
+        "output": 10,
+        "input_cached": 0.125
+      },
+      {
+        "id": "gpt-5.2",
+        "name": "GPT-5.2",
+        "input": 1.75,
+        "output": 14,
+        "input_cached": 0.175
+      },
+      {
+        "id": "gpt-5.2-pro",
+        "name": "GPT-5.2 Pro",
+        "input": 21,
+        "output": 168,
+        "input_cached": null
+      },
+      {
+        "id": "gpt-5.4",
+        "name": "GPT-5.4 ≤272k",
+        "input": 2.5,
+        "output": 15,
+        "input_cached": 0.25
+      },
+      {
+        "id": "gpt-5.4-272k",
+        "name": "GPT-5.4 >272k",
+        "input": 5,
+        "output": 22.5,
+        "input_cached": 0.5
+      },
+      {
+        "id": "gpt-5.4-pro",
+        "name": "GPT-5.4 Pro ≤272k",
+        "input": 30,
+        "output": 180,
+        "input_cached": null
+      },
+      {
+        "id": "gpt-5.4-pro-272k",
+        "name": "GPT-5.4 Pro >272k",
+        "input": 60,
+        "output": 270,
+        "input_cached": null
+      },
+      {
+        "id": "gpt-5.4-mini",
+        "name": "GPT-5.4 Mini",
+        "input": 0.75,
+        "output": 4.5,
+        "input_cached": 0.075
+      },
+      {
+        "id": "gpt-5.4-nano",
+        "name": "GPT-5.4 Nano",
+        "input": 0.2,
+        "output": 1.25,
+        "input_cached": 0.02
+      },
+      {
+        "id": "gpt-5.5",
+        "name": "GPT-5.5 ≤272k",
+        "input": 5,
+        "output": 30,
+        "input_cached": 0.5
+      },
+      {
+        "id": "gpt-5.5-272k",
+        "name": "GPT-5.5 >272k",
+        "input": 10,
+        "output": 45,
+        "input_cached": 1
+      },
+      {
+        "id": "gpt-5.5-pro",
+        "name": "GPT-5.5 Pro ≤272k",
+        "input": 30,
+        "output": 180,
+        "input_cached": null
+      }
+    ]
+  },
+  {
+    "vendor": "qwen",
+    "models": [
+      {
+        "id": "qwen3.6-plus",
+        "name": "Qwen3.6 Plus ≤256k",
+        "input": 0.5,
+        "output": 3,
+        "input_cached": null
+      },
+      {
+        "id": "qwen3.6-plus-256k",
+        "name": "Qwen3.6 Plus >256k",
+        "input": 2,
+        "output": 6,
+        "input_cached": null
+      }
+    ]
+  },
+  {
+    "vendor": "xai",
+    "models": [
+      {
+        "id": "grok-3",
+        "name": "Grok 3",
+        "input": 3,
+        "output": 15,
+        "input_cached": 0.75
+      },
+      {
+        "id": "grok-3-mini",
+        "name": "Grok 3 Mini",
+        "input": 0.3,
+        "output": 0.5,
+        "input_cached": 0.075
+      },
+      {
+        "id": "grok-4-fast",
+        "name": "Grok 4 Fast",
+        "input": 0.2,
+        "output": 0.5,
+        "input_cached": 0.05
+      },
+      {
+        "id": "grok-4",
+        "name": "Grok 4 ≤128k",
+        "input": 3,
+        "output": 15,
+        "input_cached": 0.75
+      },
+      {
+        "id": "grok-4-128k",
+        "name": "Grok 4 >128k",
+        "input": 6,
+        "output": 30,
+        "input_cached": 0.75
+      },
+      {
+        "id": "grok-4-fast",
+        "name": "Grok 4 Fast ≤128k",
+        "input": 0.2,
+        "output": 0.5,
+        "input_cached": 0.05
+      },
+      {
+        "id": "grok-4-fast-128k",
+        "name": "Grok 4 Fast >128k",
+        "input": 0.4,
+        "output": 1,
+        "input_cached": 0.05
+      },
+      {
+        "id": "grok-4-fast-reasoning",
+        "name": "Grok 4 Fast Reasoning ≤128k",
+        "input": 0.2,
+        "output": 0.5,
+        "input_cached": 0.05
+      },
+      {
+        "id": "grok-4-fast-reasoning-128k",
+        "name": "Grok 4 Fast Reasoning >128k",
+        "input": 0.4,
+        "output": 1,
+        "input_cached": 0.05
+      },
+      {
+        "id": "grok-code-fast-1",
+        "name": "Grok Code Fast 1",
+        "input": 0.2,
+        "output": 1.5,
+        "input_cached": 0.02
+      }
+    ]
+  }
+];
+      const fallbackSyncDate = "2026-06-16";
+      /* PRICE_FALLBACK_END */
+
+      const els = {
+        syncBadge: document.getElementById("syncBadge"),
+        refreshBtn: document.getElementById("refreshBtn"),
+        copyLinkBtn: document.getElementById("copyLinkBtn"),
+        exportBtn: document.getElementById("exportBtn"),
+        presetBtns: document.querySelectorAll(".presetBtn"),
+        workflowCards: document.getElementById("workflowCards"),
+        modelCountBadge: document.getElementById("modelCountBadge"),
+        trendModeToggle: document.getElementById("trendModeToggle"),
+        trendModeLabel: document.getElementById("trendModeLabel"),
+        historicalTrendChart: document.getElementById("historicalTrendChart"),
+        workflowModal: document.getElementById("workflowModal"),
+        workflowModalKicker: document.getElementById("workflowModalKicker"),
+        workflowModalTitle: document.getElementById("workflowModalTitle"),
+        workflowModalText: document.getElementById("workflowModalText"),
+        workflowModalStats: document.getElementById("workflowModalStats"),
+        workflowCloseBtn: document.getElementById("workflowCloseBtn"),
+        workflowApplyBtn: document.getElementById("workflowApplyBtn"),
+        workflowCopyBtn: document.getElementById("workflowCopyBtn"),
+        vendorSelect: document.getElementById("vendorSelect"),
+        modelSelect: document.getElementById("modelSelect"),
+        inputTokens: document.getElementById("inputTokens"),
+        inputTokensNumber: document.getElementById("inputTokensNumber"),
+        outputTokens: document.getElementById("outputTokens"),
+        outputTokensNumber: document.getElementById("outputTokensNumber"),
+        reasoningToggle: document.getElementById("reasoningToggle"),
+        reasoningMultiplier: document.getElementById("reasoningMultiplier"),
+        reasoningMultiplierValue: document.getElementById("reasoningMultiplierValue"),
+        reasoningHint: document.getElementById("reasoningHint"),
+        cacheHit: document.getElementById("cacheHit"),
+        cacheHitValue: document.getElementById("cacheHitValue"),
+        cacheSupport: document.getElementById("cacheSupport"),
+        turns: document.getElementById("turns"),
+        turnsValue: document.getElementById("turnsValue"),
+        monthlyCalls: document.getElementById("monthlyCalls"),
+        monthlyCallsNumber: document.getElementById("monthlyCallsNumber"),
+        selectedModelMeta: document.getElementById("selectedModelMeta"),
+        monthlyCost: document.getElementById("monthlyCost"),
+        runCost: document.getElementById("runCost"),
+        inputCost: document.getElementById("inputCost"),
+        outputCost: document.getElementById("outputCost"),
+        reasoningCost: document.getElementById("reasoningCost"),
+        effectiveTokens: document.getElementById("effectiveTokens"),
+        cacheSavings: document.getElementById("cacheSavings"),
+        avgTurnCost: document.getElementById("avgTurnCost"),
+        scenarioSummary: document.getElementById("scenarioSummary"),
+        shareBlurbText: document.getElementById("shareBlurbText"),
+        copyShareBlurbBtn: document.getElementById("copyShareBlurbBtn"),
+        copyXPostBtn: document.getElementById("copyXPostBtn"),
+        copyLinkedInPostBtn: document.getElementById("copyLinkedInPostBtn"),
+        advisorBox: document.getElementById("advisorBox"),
+        advisorIcon: document.getElementById("advisorIcon"),
+        advisorTitle: document.getElementById("advisorTitle"),
+        advisorText: document.getElementById("advisorText")
+      };
+
+      let models = [];
+      let chart = null;
+      let trendChart = null;
+      const isSelfTestMode = new URLSearchParams(window.location.search).get("test") === "true";
+      const state = {
+        vendor: "openai",
+        modelId: "gpt-4o",
+        inputTokens: 12000,
+        outputTokens: 1500,
+        reasoningEnabled: true,
+        reasoningMultiplier: 3,
+        cacheHit: 45,
+        turns: 4,
+        monthlyCalls: 25000,
+        trendMode: "input"
+      };
+
+      const selfTestModel = {
+        vendor: "self-test",
+        id: "self-test-model",
+        name: "Self Test Model",
+        input: 2.5,
+        output: 10,
+        input_cached: 1.25
+      };
+
+      const historicalTrend = {
+        labels: ["May 24", "Oct 24", "Jan 25", "May 25", "Jan 26", "Current"],
+        input: {
+          openai: [10, 5, 2.5, 2.5, 2.5, 2.5],
+          anthropic: [15, 15, 15, 3, 3, 3],
+          deepseek: [0.14, 0.14, 0.55, 0.55, 0.55, 0.55]
+        },
+        output: {
+          openai: [30, 15, 10, 10, 10, 10],
+          anthropic: [75, 75, 75, 15, 15, 15],
+          deepseek: [0.28, 0.28, 2.19, 2.19, 2.19, 2.19]
+        }
+      };
+
+      const socialTemplates = {
+        x: ({ model, cost, monthly, link }) => `I just ran a live AI agent cost simulation on Tokencost. ${model.name} came out to ${formatMoney(cost, 6)} per run and ${formatMoney(monthly, 2)} per month. Check the calculator: ${link}`,
+        linkedin: ({ model, cost, monthly, link }) => `I used Tokencost to estimate a real agent workflow on ${model.name}. The result was ${formatMoney(cost, 6)} per run and ${formatMoney(monthly, 2)} per month at the selected volume. The useful part is the comparison layer: input tokens, output tokens, caching, hidden reasoning, and turn growth are all priced explicitly. Calculator here: ${link}`,
+        blurb: ({ model, cost, monthly, link }) => `Current scenario: ${model.name} at ${formatMoney(cost, 6)} per run, ${formatMoney(monthly, 2)} per month. Shareable link: ${link}`
+      };
+
+      const presets = {
+        lean: { inputTokens: 3000, outputTokens: 650, reasoningEnabled: false, reasoningMultiplier: 1, cacheHit: 20, turns: 2, monthlyCalls: 10000 },
+        rag: { inputTokens: 18000, outputTokens: 1400, reasoningEnabled: true, reasoningMultiplier: 2, cacheHit: 55, turns: 4, monthlyCalls: 25000 },
+        reasoning: { inputTokens: 24000, outputTokens: 2200, reasoningEnabled: true, reasoningMultiplier: 4, cacheHit: 35, turns: 6, monthlyCalls: 50000 },
+        scale: { inputTokens: 9000, outputTokens: 900, reasoningEnabled: false, reasoningMultiplier: 1, cacheHit: 70, turns: 3, monthlyCalls: 250000 }
+      };
+
+      const workflows = [
+        {
+          id: "support-rag",
+          title: "Customer Support RAG Bot",
+          kicker: "Most SaaS apps",
+          summary: "Answers user questions with retrieved docs and short tool calls.",
+          detail: "Use this for a chatbot that reads help center chunks, account state, and previous messages before producing a concise support answer. Costs are driven mostly by repeated context, so prompt caching matters.",
+          vendor: "google",
+          modelPattern: /gemini-2\.0-flash|gemini-1\.5-flash|gpt-4o-mini/i,
+          settings: { inputTokens: 18000, outputTokens: 1100, reasoningEnabled: false, reasoningMultiplier: 1, cacheHit: 65, turns: 3, monthlyCalls: 50000 }
+        },
+        {
+          id: "coding-agent",
+          title: "Coding Agent Loop",
+          kicker: "Developer tools",
+          summary: "Plans, edits, tests, and retries across multiple turns.",
+          detail: "Use this for code assistants, internal automation, or bug-fix agents. Context grows quickly because files, logs, and tool results stay in the loop. Reasoning tokens should usually be enabled.",
+          vendor: "anthropic",
+          modelPattern: /claude-3\.7|gpt-4o|kimi-k2-thinking|qwen/i,
+          settings: { inputTokens: 42000, outputTokens: 2200, reasoningEnabled: true, reasoningMultiplier: 3.5, cacheHit: 45, turns: 6, monthlyCalls: 12000 }
+        },
+        {
+          id: "classification-pipeline",
+          title: "High-Volume Classification",
+          kicker: "Cheap routing",
+          summary: "Labels leads, tickets, products, comments, or risk categories.",
+          detail: "Use this when each call is small but volume is high. A cheaper flash or mini model often handles most traffic, while a stronger model reviews edge cases.",
+          vendor: "qwen",
+          modelPattern: /qwen|gemini-2\.0-flash|gpt-4o-mini|minimax/i,
+          settings: { inputTokens: 1400, outputTokens: 120, reasoningEnabled: false, reasoningMultiplier: 0, cacheHit: 25, turns: 1, monthlyCalls: 1000000 }
+        },
+        {
+          id: "research-agent",
+          title: "Deep Research Agent",
+          kicker: "Analyst workflows",
+          summary: "Searches, reads sources, synthesizes findings, and writes reports.",
+          detail: "Use this for market research, due diligence, competitive analysis, or long-form document synthesis. Multi-turn context and visible output are both material cost drivers.",
+          vendor: "moonshot-ai",
+          modelPattern: /kimi-k2-thinking|deepseek-reasoner|grok-4|claude-3\.7/i,
+          settings: { inputTokens: 65000, outputTokens: 5000, reasoningEnabled: true, reasoningMultiplier: 4, cacheHit: 35, turns: 7, monthlyCalls: 5000 }
+        },
+        {
+          id: "sales-agent",
+          title: "Sales Outreach Agent",
+          kicker: "Growth teams",
+          summary: "Enriches a lead, drafts outreach, and personalizes follow-ups.",
+          detail: "Use this for lead qualification and email generation. The first turn loads CRM/profile context; later turns can be cheaper if templates and instructions cache well.",
+          vendor: "openai",
+          modelPattern: /gpt-4o-mini|gemini-2\.0-flash|mistral-small|amazon-nova-lite/i,
+          settings: { inputTokens: 7000, outputTokens: 900, reasoningEnabled: false, reasoningMultiplier: 1, cacheHit: 60, turns: 3, monthlyCalls: 80000 }
+        },
+        {
+          id: "document-review",
+          title: "Document Review Agent",
+          kicker: "Legal / finance ops",
+          summary: "Reviews long documents, flags clauses, and generates summaries.",
+          detail: "Use this for contracts, policies, financial reports, or compliance review. Input tokens dominate, so large-context pricing and cache support matter more than small output differences.",
+          vendor: "mistral",
+          modelPattern: /mistral-medium|claude-3\.7|grok-4|qwen/i,
+          settings: { inputTokens: 120000, outputTokens: 3500, reasoningEnabled: true, reasoningMultiplier: 2.5, cacheHit: 50, turns: 2, monthlyCalls: 3500 }
+        }
+      ];
+      let activeWorkflow = workflows[0];
+
+      function initAdsense() {
+        const config = window.ADSENSE_CONFIG || {};
+        const configured = config.enabled &&
+          /^ca-pub-\d+$/.test(config.publisherId || "") &&
+          /^\d+$/.test(config.topSlot || "") &&
+          /^\d+$/.test(config.sideSlot || "");
+
+        if (!configured) return;
+
+        const units = [
+          { unit: document.getElementById("topAdUnit"), fallback: document.getElementById("topAdFallback"), slot: config.topSlot },
+          { unit: document.getElementById("sideAdUnit"), fallback: document.getElementById("sideAdFallback"), slot: config.sideSlot }
+        ];
+
+        units.forEach(({ unit, fallback, slot }) => {
+          if (!unit) return;
+          unit.dataset.adClient = config.publisherId;
+          unit.dataset.adSlot = slot;
+          unit.classList.remove("hidden");
+          if (fallback) fallback.classList.add("hidden");
+        });
+
+        if (!window.adsbygoogle) {
+          window.adsbygoogle = [];
+        }
+        units.forEach(() => {
+          try {
+            window.adsbygoogle.push({});
+          } catch (error) {
+            console.warn("AdSense slot initialization failed.", error);
+          }
+        });
+      }
+
+      function latestPrice(history = []) {
+        return history.find(row => row.to_date === null || row.to_date === undefined) || history[history.length - 1] || {};
+      }
+
+      function normalize(datasets) {
+        return datasets.flatMap(dataset => (dataset.models || []).map(model => {
+          const price = latestPrice(model.price_history);
+          return {
+            vendor: dataset.vendor || "unknown",
+            id: model.id,
+            name: model.name || model.id,
+            input: Number(price.input ?? 0),
+            output: Number(price.output ?? 0),
+            input_cached: price.input_cached === null || price.input_cached === undefined ? null : Number(price.input_cached)
+          };
+        })).filter(model => model.id && model.input >= 0 && model.output >= 0)
+          .sort((a, b) => a.vendor.localeCompare(b.vendor) || a.name.localeCompare(b.name));
+      }
+
+      function isReasoningModel(model) {
+        const key = `${model.id} ${model.name}`.toLowerCase();
+        return /(reason|thinking|deepseek-r1|r1|o1|o3|o4|gemini-2\.5|claude-3\.7)/.test(key);
+      }
+
+      function formatMoney(value, maximumFractionDigits = 4) {
+        const minimumFractionDigits = Math.min(maximumFractionDigits, 2);
+        return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits, maximumFractionDigits }).format(value);
+      }
+
+      function formatWhole(value) {
+        return new Intl.NumberFormat("en-US").format(Math.round(value));
+      }
+
+      function parseCurrencyText(text) {
+        const value = Number(String(text || "").replace(/[^0-9.-]/g, ""));
+        return Number.isFinite(value) ? value : 0;
+      }
+
+      function trendSeries() {
+        const palette = {
+          openai: "rgba(16,185,129,0.95)",
+          anthropic: "rgba(99,102,241,0.95)",
+          deepseek: "rgba(245,158,11,0.95)"
+        };
+        const mode = state.trendMode === "output" ? "output" : "input";
+        const label = mode === "output" ? "Output Token Price Trend" : "Input Token Price Trend";
+        const data = historicalTrend[mode];
+        return {
+          label,
+          datasets: [
+            { label: "OpenAI Flagship", data: data.openai, borderColor: palette.openai, backgroundColor: palette.openai },
+            { label: "Anthropic Claude", data: data.anthropic, borderColor: palette.anthropic, backgroundColor: palette.anthropic },
+            { label: "DeepSeek Disruptor", data: data.deepseek, borderColor: palette.deepseek, backgroundColor: palette.deepseek }
+          ]
+        };
+      }
+
+      function syncTrendToggle() {
+        if (!els.trendModeToggle || !els.trendModeLabel) return;
+        const outputMode = state.trendMode === "output";
+        els.trendModeToggle.setAttribute("aria-checked", String(outputMode));
+        els.trendModeToggle.classList.toggle("bg-emerald-500", outputMode);
+        els.trendModeToggle.classList.toggle("bg-slate-700", !outputMode);
+        if (els.trendModeToggle.firstElementChild) {
+          els.trendModeToggle.firstElementChild.classList.toggle("left-1", !outputMode);
+          els.trendModeToggle.firstElementChild.classList.toggle("right-1", outputMode);
+        }
+        els.trendModeLabel.textContent = outputMode ? "Output Token Price Trend" : "Input Token Price Trend";
+      }
+
+      function updateTrendChart() {
+        if (!els.historicalTrendChart || !window.Chart) return;
+        syncTrendToggle();
+        const series = trendSeries();
+        const config = {
+          type: "line",
+          data: {
+            labels: historicalTrend.labels,
+            datasets: series.datasets.map(dataset => ({
+              ...dataset,
+              fill: false,
+              borderWidth: 2.5,
+              tension: 0.38,
+              pointRadius: 3,
+              pointHoverRadius: 8,
+              pointHitRadius: 14,
+              pointBackgroundColor: dataset.borderColor,
+              pointBorderColor: "#e2e8f0",
+              pointBorderWidth: 2,
+              pointHoverBackgroundColor: "#ffffff",
+              pointHoverBorderColor: dataset.borderColor,
+              pointHoverBorderWidth: 3
+            }))
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: { duration: 240 },
+            plugins: {
+              legend: {
+                labels: {
+                  color: "#e2e8f0",
+                  usePointStyle: true,
+                  boxWidth: 10,
+                  boxHeight: 10
+                }
+              },
+              tooltip: {
+                backgroundColor: "rgba(15,23,42,.96)",
+                borderColor: "rgba(148,163,184,.3)",
+                borderWidth: 1,
+                titleColor: "#fff",
+                bodyColor: "#e2e8f0",
+                displayColors: true,
+                padding: 12,
+                callbacks: {
+                  label: item => ` ${item.dataset.label}: $${Number(item.parsed.y).toFixed(2)}/1M tokens`
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { color: "#cbd5e1", font: { size: 11, weight: 600 } }
+              },
+              y: {
+                beginAtZero: true,
+                grid: { color: "rgba(148,163,184,.12)" },
+                ticks: { color: "#94a3b8", callback: value => `$${value}` }
+              }
+            }
+          }
+        };
+
+        if (!trendChart) {
+          trendChart = new Chart(els.historicalTrendChart, config);
+        } else {
+          trendChart.data.labels = config.data.labels;
+          trendChart.data.datasets = config.data.datasets;
+          trendChart.options = config.options;
+          trendChart.update();
+        }
+      }
+
+      function renderHistoricalTrend() {
+        if (!window.Chart) return;
+        updateTrendChart();
+      }
+
+      function runAutomationVerification() {
+        if (!isSelfTestMode) return;
+
+        const testState = {
+          vendor: selfTestModel.vendor,
+          modelId: selfTestModel.id,
+          inputTokens: 10000,
+          outputTokens: 2000,
+          reasoningEnabled: true,
+          reasoningMultiplier: 3,
+          cacheHit: 50,
+          turns: 3,
+          monthlyCalls: 1
+        };
+
+        models = [selfTestModel];
+        Object.assign(state, testState);
+        populateVendors();
+        populateModels();
+        render();
+
+        const expected = (() => {
+          const standardRate = 2;
+          const cachedRate = 0.5;
+          const outputRate = 8;
+          const cacheRatio = 0.5;
+          let inputCost = 0;
+          let outputCost = 0;
+          let reasoningCost = 0;
+          let noCacheInputCost = 0;
+          for (let turn = 1; turn <= 3; turn++) {
+            const grownInput = 10000 * turn;
+            const cachedTokens = grownInput * cacheRatio;
+            const standardTokens = grownInput - cachedTokens;
+            const hiddenTokens = 2000 * 3;
+            inputCost += ((standardTokens * standardRate) + (cachedTokens * cachedRate)) / 1_000_000;
+            outputCost += (2000 * outputRate) / 1_000_000;
+            reasoningCost += (hiddenTokens * standardRate) / 1_000_000;
+            noCacheInputCost += (grownInput * standardRate) / 1_000_000;
+          }
+          const total = inputCost + outputCost + reasoningCost;
+          return {
+            inputCost,
+            outputCost,
+            reasoningCost,
+            total,
+            monthly: total * 1,
+            cacheSavings: noCacheInputCost - inputCost
+          };
+        })();
+        const actual = {
+          inputCost: parseCurrencyText(els.inputCost.textContent),
+          outputCost: parseCurrencyText(els.outputCost.textContent),
+          reasoningCost: parseCurrencyText(els.reasoningCost.textContent),
+          runCost: parseCurrencyText(els.runCost.textContent),
+          monthlyCost: parseCurrencyText(els.monthlyCost.textContent),
+          cacheSavings: parseCurrencyText(els.cacheSavings.textContent),
+          avgTurnCost: parseCurrencyText(els.avgTurnCost.textContent)
+        };
+
+        const matrix = [
+          { metric: "Input cost", expected: expected.inputCost, actual: actual.inputCost, variance: actual.inputCost - expected.inputCost },
+          { metric: "Output cost", expected: expected.outputCost, actual: actual.outputCost, variance: actual.outputCost - expected.outputCost },
+          { metric: "Reasoning cost", expected: expected.reasoningCost, actual: actual.reasoningCost, variance: actual.reasoningCost - expected.reasoningCost },
+          { metric: "Run cost", expected: expected.total, actual: actual.runCost, variance: actual.runCost - expected.total },
+          { metric: "Monthly cost", expected: expected.monthly, actual: actual.monthlyCost, variance: actual.monthlyCost - expected.monthly },
+          { metric: "Cache savings", expected: expected.cacheSavings, actual: actual.cacheSavings, variance: actual.cacheSavings - expected.cacheSavings },
+          { metric: "Avg turn cost", expected: expected.total / testState.turns, actual: actual.avgTurnCost, variance: actual.avgTurnCost - (expected.total / testState.turns) }
+        ];
+
+        console.table(matrix);
+        const epsilon = 1e-6;
+        const failed = matrix.filter(row => Math.abs(row.variance) > epsilon);
+        if (!failed.length) {
+          console.log("✅ AUTOMATION VERIFICATION PASSED");
+        } else {
+          console.error("❌ FORMULA ERROR DETECTED", {
+            maxVariance: Math.max(...failed.map(row => Math.abs(row.variance))),
+            failed
+          });
+        }
+      }
+
+      function stateQuery() {
+        const params = new URLSearchParams({
+          vendor: state.vendor,
+          model: state.modelId,
+          in: state.inputTokens,
+          out: state.outputTokens,
+          think: state.reasoningEnabled ? "1" : "0",
+          mult: state.reasoningMultiplier,
+          cache: state.cacheHit,
+          turns: state.turns,
+          calls: state.monthlyCalls
+        });
+        return params.toString();
+      }
+
+      function applyQueryState() {
+        const params = new URLSearchParams(window.location.search);
+        if (!params.size) return;
+        state.vendor = params.get("vendor") || state.vendor;
+        state.modelId = params.get("model") || state.modelId;
+        state.inputTokens = Number(params.get("in")) || state.inputTokens;
+        state.outputTokens = Number(params.get("out")) || state.outputTokens;
+        state.reasoningEnabled = params.get("think") ? params.get("think") === "1" : state.reasoningEnabled;
+        state.reasoningMultiplier = Number(params.get("mult")) || state.reasoningMultiplier;
+        state.cacheHit = Number(params.get("cache")) || state.cacheHit;
+        state.turns = Number(params.get("turns")) || state.turns;
+        state.monthlyCalls = Number(params.get("calls")) || state.monthlyCalls;
+      }
+
+      function modelCost(model, overrides = {}) {
+        const inputTokens = overrides.inputTokens ?? state.inputTokens;
+        const outputTokens = overrides.outputTokens ?? state.outputTokens;
+        const turns = overrides.turns ?? state.turns;
+        const cacheHit = (overrides.cacheHit ?? state.cacheHit) / 100;
+        const reasoningOn = overrides.reasoningEnabled ?? state.reasoningEnabled;
+        const reasoningMultiplier = overrides.reasoningMultiplier ?? state.reasoningMultiplier;
+        const cachedRate = model.input_cached ?? model.input;
+        let inputCost = 0;
+        let outputCost = 0;
+        let reasoningCost = 0;
+        let noCacheInputCost = 0;
+        let totalPromptTokens = 0;
+        let hiddenTokens = 0;
+
+        for (let turn = 1; turn <= turns; turn++) {
+          const grownInput = inputTokens * turn;
+          const cachedTokens = grownInput * cacheHit;
+          const standardTokens = grownInput - cachedTokens;
+          const hidden = reasoningOn ? outputTokens * reasoningMultiplier : 0;
+          totalPromptTokens += grownInput;
+          hiddenTokens += hidden;
+          inputCost += ((standardTokens * model.input) + (cachedTokens * cachedRate)) / 1_000_000;
+          noCacheInputCost += (grownInput * model.input) / 1_000_000;
+          reasoningCost += (hidden * model.input) / 1_000_000;
+          outputCost += (outputTokens * model.output) / 1_000_000;
+        }
+
+        const total = inputCost + outputCost + reasoningCost;
+        return {
+          inputCost,
+          outputCost,
+          reasoningCost,
+          total,
+          monthly: total * state.monthlyCalls,
+          cacheSavings: Math.max(0, noCacheInputCost - inputCost),
+          effectiveTokens: totalPromptTokens + hiddenTokens + (outputTokens * turns)
+        };
+      }
+
+      function currentModel() {
+        return models.find(model => model.id === state.modelId) || models[0];
+      }
+
+      function populateVendors() {
+        const vendors = [...new Set(models.map(model => model.vendor))];
+        els.vendorSelect.innerHTML = vendors.map(vendor => `<option value="${vendor}">${vendor[0].toUpperCase()}${vendor.slice(1)}</option>`).join("");
+        if (!vendors.includes(state.vendor)) state.vendor = vendors[0];
+        els.vendorSelect.value = state.vendor;
+      }
+
+      function populateModels() {
+        const vendorModels = models.filter(model => model.vendor === state.vendor);
+        els.modelSelect.innerHTML = vendorModels.map(model => `<option value="${model.id}">${model.name}</option>`).join("");
+        if (!vendorModels.some(model => model.id === state.modelId)) {
+          const preferred = vendorModels.find(model => /gpt-4o$|claude-3\.7|gemini-2\.0-flash|deepseek-reasoner/.test(model.id));
+          state.modelId = (preferred || vendorModels[0]).id;
+        }
+        els.modelSelect.value = state.modelId;
+      }
+
+      function syncInputs() {
+        els.inputTokens.value = Math.min(state.inputTokens, Number(els.inputTokens.max));
+        els.inputTokensNumber.value = state.inputTokens;
+        els.outputTokens.value = Math.min(state.outputTokens, Number(els.outputTokens.max));
+        els.outputTokensNumber.value = state.outputTokens;
+        els.reasoningMultiplier.value = state.reasoningMultiplier;
+        els.reasoningMultiplierValue.textContent = `${state.reasoningMultiplier.toFixed(2).replace(/\.00$/, "")}x`;
+        els.cacheHit.value = state.cacheHit;
+        els.cacheHitValue.textContent = `${state.cacheHit}%`;
+        els.turns.value = state.turns;
+        els.turnsValue.textContent = `${state.turns}`;
+        els.monthlyCalls.value = Math.min(state.monthlyCalls, Number(els.monthlyCalls.max));
+        els.monthlyCallsNumber.value = state.monthlyCalls;
+        els.reasoningToggle.setAttribute("aria-checked", String(state.reasoningEnabled));
+        els.reasoningToggle.classList.toggle("bg-emerald-500", state.reasoningEnabled);
+        els.reasoningToggle.classList.toggle("bg-slate-700", !state.reasoningEnabled);
+        els.reasoningToggle.firstElementChild.classList.toggle("right-1", state.reasoningEnabled);
+        els.reasoningToggle.firstElementChild.classList.toggle("left-1", !state.reasoningEnabled);
+        els.reasoningMultiplier.disabled = !state.reasoningEnabled;
+        els.reasoningMultiplier.classList.toggle("opacity-40", !state.reasoningEnabled);
+      }
+
+      function comparisonModels() {
+        const wanted = ["gpt-4o", "claude-3.7-sonnet", "deepseek-reasoner", "kimi-k2-thinking", "qwen3.6-plus", "minimax-m2", "gemini-2.5-pro-preview-03-25", "gemini-2.0-flash", "grok-4-fast", "gpt-4o-mini"];
+        const picked = wanted.map(id => models.find(model => model.id === id)).filter(Boolean);
+        if (!picked.some(model => model.id === state.modelId)) picked.unshift(currentModel());
+        const unique = [...new Map(picked.map(model => [model.id, model])).values()];
+        return unique.slice(0, 6);
+      }
+
+      function findWorkflowModel(workflow) {
+        return models.find(model => model.vendor === workflow.vendor && workflow.modelPattern.test(`${model.id} ${model.name}`)) ||
+          models.find(model => workflow.modelPattern.test(`${model.id} ${model.name} ${model.vendor}`)) ||
+          currentModel();
+      }
+
+      function renderWorkflowCards() {
+        if (!els.workflowCards) return;
+        els.workflowCards.innerHTML = workflows.map(workflow => `
+          <button data-workflow="${workflow.id}" class="workflowBtn rounded-md border border-slate-700 bg-slate-950/55 p-3 text-left transition hover:border-emerald-400/50 hover:bg-slate-950/80">
+            <span class="block text-[10px] font-bold uppercase tracking-wide text-emerald-300">${workflow.kicker}</span>
+            <span class="mt-1 block text-sm font-bold text-white">${workflow.title}</span>
+            <span class="mt-1 block text-xs leading-5 text-slate-400">${workflow.summary}</span>
+          </button>
+        `).join("");
+        document.querySelectorAll(".workflowBtn").forEach(button => {
+          button.addEventListener("click", () => openWorkflow(button.dataset.workflow));
+        });
+      }
+
+      function workflowStats(workflow) {
+        const settings = workflow.settings;
+        return [
+          ["Input", `${formatWhole(settings.inputTokens)} tokens`],
+          ["Output", `${formatWhole(settings.outputTokens)} tokens`],
+          ["Turns", `${settings.turns}`],
+          ["Cache", `${settings.cacheHit}%`],
+          ["Reasoning", settings.reasoningEnabled ? `${settings.reasoningMultiplier}x` : "Off"],
+          ["Monthly", `${formatWhole(settings.monthlyCalls)} calls`]
+        ];
+      }
+
+      function openWorkflow(workflowId) {
+        activeWorkflow = workflows.find(workflow => workflow.id === workflowId) || workflows[0];
+        const suggested = findWorkflowModel(activeWorkflow);
+        els.workflowModalKicker.textContent = `${activeWorkflow.kicker} • Suggested model: ${suggested.name}`;
+        els.workflowModalTitle.textContent = activeWorkflow.title;
+        els.workflowModalText.textContent = activeWorkflow.detail;
+        els.workflowModalStats.innerHTML = workflowStats(activeWorkflow).map(([label, value]) => `
+          <div class="rounded-md border border-slate-800 bg-slate-900/70 p-3">
+            <div class="text-[10px] font-bold uppercase tracking-wide text-slate-500">${label}</div>
+            <div class="mt-1 text-sm font-bold text-white">${value}</div>
+          </div>
+        `).join("");
+        els.workflowModal.classList.remove("hidden");
+        els.workflowModal.classList.add("flex");
+      }
+
+      function closeWorkflow() {
+        els.workflowModal.classList.add("hidden");
+        els.workflowModal.classList.remove("flex");
+      }
+
+      function applyWorkflow(workflow) {
+        const model = findWorkflowModel(workflow);
+        Object.assign(state, workflow.settings, { vendor: model.vendor, modelId: model.id });
+        populateVendors();
+        populateModels();
+        render();
+        closeWorkflow();
+      }
+
+      async function copyWorkflowSummary() {
+        const settings = activeWorkflow.settings;
+        const text = `${activeWorkflow.title}: ${activeWorkflow.summary} Settings: ${formatWhole(settings.inputTokens)} input tokens, ${formatWhole(settings.outputTokens)} output tokens, ${settings.turns} turns, ${settings.cacheHit}% cache hit, ${settings.reasoningEnabled ? `${settings.reasoningMultiplier}x reasoning` : "reasoning off"}, ${formatWhole(settings.monthlyCalls)} monthly calls.`;
+        try {
+          await navigator.clipboard.writeText(text);
+          els.workflowCopyBtn.textContent = "Copied";
+        } catch (_) {
+          window.prompt("Copy this workflow summary:", text);
+        }
+        setTimeout(() => { els.workflowCopyBtn.textContent = "Copy Summary"; }, 1400);
+      }
+
+      function updateChart() {
+        const chartEl = document.getElementById("comparisonChart");
+        if (!chartEl) return;
+        if (!window.Chart) {
+          chartEl.replaceWith(Object.assign(document.createElement("div"), {
+            className: "flex h-full items-center justify-center rounded-md border border-slate-800 bg-slate-950/40 p-6 text-center text-sm text-slate-400",
+            textContent: "Chart.js could not be loaded from the CDN. Cost readouts remain active."
+          }));
+          return;
+        }
+        const ctx = chartEl;
+        const compared = comparisonModels();
+        const labels = compared.map(model => model.name.replace(" Preview", ""));
+        const values = compared.map(model => Number(modelCost(model).total.toFixed(6)));
+        const colors = compared.map(model => model.id === state.modelId ? "rgba(16,185,129,.9)" : "rgba(99,102,241,.78)");
+
+        if (!chart) {
+          chart = new Chart(ctx, {
+            type: "bar",
+            data: { labels, datasets: [{ label: "Cost per run", data: values, backgroundColor: colors, borderColor: colors.map(c => c.replace(".78", "1").replace(".9", "1")), borderWidth: 1, borderRadius: 8 }] },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              animation: { duration: 220 },
+              plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: { label: item => ` ${formatMoney(item.parsed.y, 6)} per run` } }
+              },
+              scales: {
+                x: { grid: { display: false }, ticks: { color: "#cbd5e1", font: { size: 11, weight: 600 } } },
+                y: { beginAtZero: true, grid: { color: "rgba(148,163,184,.13)" }, ticks: { color: "#94a3b8", callback: value => `$${value}` } }
+              }
+            }
+          });
+        } else {
+          chart.data.labels = labels;
+          chart.data.datasets[0].data = values;
+          chart.data.datasets[0].backgroundColor = colors;
+          chart.data.datasets[0].borderColor = colors;
+          chart.update();
+        }
+      }
+
+      function updateAdvisor(cost, model) {
+        const monthly = cost.monthly;
+        const cheapModel = models.find(m => /gemini-2\.0-flash|gpt-4o-mini|deepseek-v4-flash|claude-3\.5-haiku/.test(m.id)) || models.reduce((a, b) => (a.input + a.output < b.input + b.output ? a : b), models[0]);
+        const currentSimple = modelCost(model, { reasoningEnabled: false, turns: 1 }).total;
+        const cheapSimple = modelCost(cheapModel, { reasoningEnabled: false, turns: 1 }).total;
+        const blended = (cost.total * 0.3) + (cheapSimple * 0.7);
+        const savings = cost.total > 0 ? Math.max(0, 1 - (blended / cost.total)) : 0;
+
+        if (monthly > 100) {
+          els.advisorBox.className = "rounded-lg border border-amber-300/30 bg-amber-400/10 p-5 shadow-glow transition";
+          els.advisorIcon.className = "inline-flex h-8 w-8 items-center justify-center rounded-md bg-amber-300/15 text-lg";
+          els.advisorIcon.textContent = "$";
+          els.advisorTitle.textContent = "Smart Routing Suggestion";
+          els.advisorText.textContent = `Optimization Tip: At ${formatMoney(monthly, 2)} per month, route roughly 70% of simple classification, extraction, and preprocessing turns to ${cheapModel.name}, reserving ${model.name} for final execution or high-risk reasoning. This scenario estimates up to ${Math.round(savings * 100)}% savings before quality guardrails.`;
+        } else if (state.cacheHit < 30 && model.input_cached !== null) {
+          els.advisorBox.className = "rounded-lg border border-emerald-300/30 bg-emerald-400/10 p-5 shadow-glow transition";
+          els.advisorIcon.className = "inline-flex h-8 w-8 items-center justify-center rounded-md bg-emerald-300/15 text-lg";
+          els.advisorIcon.textContent = "%";
+          els.advisorTitle.textContent = "Cache Leverage Available";
+          els.advisorText.textContent = `${model.name} exposes cached-input pricing. Raising reusable system, tool, and memory context cache hits from ${state.cacheHit}% toward 70% would reduce the repeated context portion of this agent run.`;
+        } else {
+          els.advisorBox.className = "rounded-lg border border-indigo-300/25 bg-indigo-400/10 p-5 shadow-glow transition";
+          els.advisorIcon.className = "inline-flex h-8 w-8 items-center justify-center rounded-md bg-indigo-300/15 text-lg";
+          els.advisorIcon.textContent = "i";
+          els.advisorTitle.textContent = "Cost Profile Healthy";
+          els.advisorText.textContent = `This scenario is below the $100/month alert threshold. Keep an eye on hidden reasoning tokens and turn count; those two settings compound fastest as agent context grows.`;
+        }
+      }
+
+      function updateScenarioSummary(cost, model) {
+        const compared = comparisonModels().map(item => ({ model: item, cost: modelCost(item).total })).sort((a, b) => a.cost - b.cost);
+        const cheapest = compared[0]?.model;
+        const selectedRank = compared.findIndex(item => item.model.id === model.id) + 1;
+        const rankText = selectedRank > 0 ? `It ranks #${selectedRank} among the visible comparison set for this workload.` : "It is outside the current comparison shortlist.";
+        els.scenarioSummary.textContent = `${model.name} is estimated at ${formatMoney(cost.total, 6)} per agent run and ${formatMoney(cost.monthly, 2)} per month at ${formatWhole(state.monthlyCalls)} calls. ${rankText}${cheapest && cheapest.id !== model.id ? ` The cheapest visible route is ${cheapest.name}; compare quality before switching production traffic.` : ""}`;
+      }
+
+      function currentShareContext() {
+        const model = currentModel();
+        const cost = modelCost(model);
+        return {
+          model,
+          cost: cost.total,
+          monthly: cost.monthly,
+          link: `${window.location.origin}${window.location.pathname}?${stateQuery()}`
+        };
+      }
+
+      function updateShareBlurb() {
+        if (!els.shareBlurbText) return;
+        els.shareBlurbText.textContent = socialTemplates.blurb(currentShareContext());
+      }
+
+      async function copySocialPost(kind) {
+        const template = socialTemplates[kind];
+        if (!template) return;
+        const text = template(currentShareContext());
+        try {
+          await navigator.clipboard.writeText(text);
+          if (kind === "x") els.copyXPostBtn.textContent = "Copied";
+          if (kind === "linkedin") els.copyLinkedInPostBtn.textContent = "Copied";
+          if (kind === "blurb") els.copyShareBlurbBtn.textContent = "Copied";
+        } catch (_) {
+          window.prompt("Copy this text:", text);
+        }
+        setTimeout(() => {
+          if (kind === "x") els.copyXPostBtn.textContent = "Copy X Post";
+          if (kind === "linkedin") els.copyLinkedInPostBtn.textContent = "Copy LinkedIn Post";
+          if (kind === "blurb") els.copyShareBlurbBtn.textContent = "Copy Share Blurb";
+        }, 1400);
+      }
+
+      function exportCsv() {
+        const model = currentModel();
+        const cost = modelCost(model);
+        const rows = [
+          ["Field", "Value"],
+          ["Vendor", model.vendor],
+          ["Model", model.name],
+          ["Input tokens", state.inputTokens],
+          ["Output tokens", state.outputTokens],
+          ["Reasoning enabled", state.reasoningEnabled],
+          ["Reasoning multiplier", state.reasoningMultiplier],
+          ["Cache hit rate", `${state.cacheHit}%`],
+          ["Agent turns", state.turns],
+          ["Monthly calls", state.monthlyCalls],
+          ["Cost per run", cost.total],
+          ["Monthly estimate", cost.monthly],
+          ["Input cost per run", cost.inputCost],
+          ["Output cost per run", cost.outputCost],
+          ["Reasoning cost per run", cost.reasoningCost],
+          ["Cache savings per run", cost.cacheSavings]
+        ];
+        const csv = rows.map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(",")).join("\n");
+        const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "ai-agent-cost-scenario.csv";
+        link.click();
+        URL.revokeObjectURL(url);
+      }
+
+      async function copyShareLink() {
+        const url = `${window.location.origin}${window.location.pathname}?${stateQuery()}`;
+        try {
+          await navigator.clipboard.writeText(url);
+          els.copyLinkBtn.textContent = "Link Copied";
+        } catch (_) {
+          window.prompt("Copy this test link:", url);
+        }
+        setTimeout(() => { els.copyLinkBtn.textContent = "Copy Test Link"; }, 1600);
+      }
+
+      function render() {
+        if (!models.length) return;
+        const model = currentModel();
+        const cost = modelCost(model);
+        syncInputs();
+
+        if (els.modelCountBadge) {
+          const vendorCount = new Set(models.map(item => item.vendor)).size;
+          els.modelCountBadge.textContent = `${models.length} models / ${vendorCount} vendors`;
+        }
+        els.selectedModelMeta.textContent = `${model.vendor.toUpperCase()} • Input ${formatMoney(model.input, 3)}/1M • Output ${formatMoney(model.output, 3)}/1M${model.input_cached !== null ? ` • Cached ${formatMoney(model.input_cached, 3)}/1M` : " • No cached-input price listed"}`;
+        els.cacheSupport.textContent = model.input_cached !== null ? `Cached input supported at ${formatMoney(model.input_cached, 3)} per 1M tokens.` : "No cached-input price in live data; cache slider uses standard input price.";
+        els.reasoningHint.textContent = isReasoningModel(model) ? "Reasoning-looking model detected. Hidden tokens are enabled by default." : "Adds hidden tokens billed at the input rate.";
+        els.monthlyCost.textContent = formatMoney(cost.monthly, 2);
+        els.runCost.textContent = formatMoney(cost.total, 6);
+        els.inputCost.textContent = formatMoney(cost.inputCost, 6);
+        els.outputCost.textContent = formatMoney(cost.outputCost, 6);
+        els.reasoningCost.textContent = formatMoney(cost.reasoningCost, 6);
+        els.effectiveTokens.textContent = formatWhole(cost.effectiveTokens);
+        els.cacheSavings.textContent = formatMoney(cost.cacheSavings, 6);
+        els.avgTurnCost.textContent = formatMoney(cost.total / state.turns, 6);
+        updateChart();
+        updateAdvisor(cost, model);
+        updateScenarioSummary(cost, model);
+        updateShareBlurb();
+        renderHistoricalTrend();
+      }
+
+      function wireEvents() {
+        els.vendorSelect.addEventListener("change", event => {
+          state.vendor = event.target.value;
+          populateModels();
+          render();
+        });
+        els.modelSelect.addEventListener("change", event => {
+          state.modelId = event.target.value;
+          const model = currentModel();
+          if (isReasoningModel(model) && !state.reasoningEnabled) state.reasoningEnabled = true;
+          render();
+        });
+        [["inputTokens", "inputTokensNumber"], ["outputTokens", "outputTokensNumber"], ["monthlyCalls", "monthlyCallsNumber"]].forEach(([rangeId, numberId]) => {
+          const range = els[rangeId];
+          const number = els[numberId];
+          const key = rangeId;
+          const update = value => {
+            const min = Number(number.min || range.min);
+            const max = Number(number.max || 100000000);
+            state[key] = Math.max(min, Math.min(max, Number(value) || min));
+            render();
+          };
+          range.addEventListener("input", event => update(event.target.value));
+          number.addEventListener("input", event => update(event.target.value));
+        });
+        els.reasoningToggle.addEventListener("click", () => {
+          state.reasoningEnabled = !state.reasoningEnabled;
+          render();
+        });
+        els.reasoningMultiplier.addEventListener("input", event => {
+          state.reasoningMultiplier = Number(event.target.value);
+          render();
+        });
+        els.cacheHit.addEventListener("input", event => {
+          state.cacheHit = Number(event.target.value);
+          render();
+        });
+        els.turns.addEventListener("input", event => {
+          state.turns = Number(event.target.value);
+          render();
+        });
+        els.trendModeToggle.addEventListener("click", () => {
+          state.trendMode = state.trendMode === "input" ? "output" : "input";
+          renderHistoricalTrend();
+        });
+        els.refreshBtn.addEventListener("click", loadPrices);
+        els.exportBtn.addEventListener("click", exportCsv);
+        els.copyLinkBtn.addEventListener("click", copyShareLink);
+        els.copyShareBlurbBtn.addEventListener("click", () => copySocialPost("blurb"));
+        els.copyXPostBtn.addEventListener("click", () => copySocialPost("x"));
+        els.copyLinkedInPostBtn.addEventListener("click", () => copySocialPost("linkedin"));
+        els.presetBtns.forEach(button => {
+          button.addEventListener("click", () => {
+            Object.assign(state, presets[button.dataset.preset]);
+            render();
+          });
+        });
+        els.workflowCloseBtn.addEventListener("click", closeWorkflow);
+        els.workflowApplyBtn.addEventListener("click", () => applyWorkflow(activeWorkflow));
+        els.workflowCopyBtn.addEventListener("click", copyWorkflowSummary);
+        els.workflowModal.addEventListener("click", event => {
+          if (event.target === els.workflowModal) closeWorkflow();
+        });
+        document.addEventListener("keydown", event => {
+          if (event.key === "Escape" && !els.workflowModal.classList.contains("hidden")) closeWorkflow();
+        });
+      }
+
+      async function fetchCommitStamp() {
+        try {
+          const response = await fetch(commitUrl, { cache: "no-store" });
+          if (!response.ok) throw new Error(`Commit API ${response.status}`);
+          const commits = await response.json();
+          const date = commits?.[0]?.commit?.committer?.date;
+          return date ? new Date(date) : new Date();
+        } catch (_) {
+          return new Date();
+        }
+      }
+
+      async function discoverVendorFiles() {
+        try {
+          const response = await fetch(contentsUrl, { cache: "no-store" });
+          if (!response.ok) throw new Error(`Contents API ${response.status}`);
+          const files = await response.json();
+          const discovered = files
+            .filter(file => file.type === "file" && /\.json$/.test(file.name))
+            .map(file => file.name)
+            .sort();
+          return discovered.length ? discovered : fallbackVendorFiles;
+        } catch (error) {
+          console.warn("Vendor discovery failed; using fallback vendor list.", error);
+          return fallbackVendorFiles;
+        }
+      }
+
+      async function loadPrices() {
+        els.syncBadge.textContent = "Syncing live prices from GitHub...";
+        els.syncBadge.className = "rounded-full border border-slate-700 bg-slate-900/85 px-4 py-2 text-sm font-semibold text-slate-200 shadow-glow";
+        if (isSelfTestMode) {
+          models = [selfTestModel];
+          els.syncBadge.textContent = "🧪 Self-Test Mode: fixed rates loaded";
+          els.syncBadge.className = "rounded-full border border-amber-300/35 bg-amber-400/10 px-4 py-2 text-sm font-semibold text-amber-100 shadow-glow";
+          populateVendors();
+          populateModels();
+          render();
+          runAutomationVerification();
+          return;
+        }
+        try {
+          const vendorFiles = await discoverVendorFiles();
+          const datasets = await Promise.all(vendorFiles.map(async file => {
+            const response = await fetch(`${rawBase}${file}`, { cache: "no-store" });
+            if (!response.ok) throw new Error(`${file}: ${response.status}`);
+            return response.json();
+          }));
+          const stamp = await fetchCommitStamp();
+          models = normalize(datasets);
+          if (!models.length) throw new Error("No models parsed");
+          els.syncBadge.textContent = `🟢 Live Prices Synced: ${stamp.toLocaleString()} from GitHub (${vendorFiles.length} vendors)`;
+          els.syncBadge.className = "rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm font-semibold text-emerald-100 shadow-glow";
+        } catch (error) {
+          console.warn("Pricing fetch failed; using fallback data.", error);
+          models = normalize(fallbackData);
+          els.syncBadge.textContent = `⚠️ Fallback Mode (Local Cache): ${fallbackSyncDate}`;
+          els.syncBadge.className = "rounded-full border border-amber-300/35 bg-amber-400/10 px-4 py-2 text-sm font-semibold text-amber-100 shadow-glow";
+        }
+        populateVendors();
+        populateModels();
+        render();
+      }
+
+      wireEvents();
+      renderWorkflowCards();
+      initAdsense();
+      applyQueryState();
+      models = normalize(fallbackData);
+      populateVendors();
+      populateModels();
+      render();
+      loadPrices();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "updatedAt": "2026-06-24",
+  "disclaimer": "Video platform pricing changes often. Verify official pricing before publishing or buying credits.",
+  "tools": [
+    { "id": "runway", "name": "Runway", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Use subscription or credit cost depending on your plan." },
+    { "id": "pika", "name": "Pika", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Enter monthly plan or credit cost manually." },
+    { "id": "luma", "name": "Luma Dream Machine", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Use custom pricing until you confirm plan details." },
+    { "id": "kling-global", "name": "Kling Global", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Manual input recommended; global pricing is not always fixed." },
+    { "id": "sora", "name": "OpenAI Sora", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "generation minute or credit", "notes": "If available to you, enter the published or private-plan price." },
+    { "id": "veo", "name": "Google Veo", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "generation minute or credit", "notes": "Use custom pricing if you have access to a private beta or package." },
+    { "id": "heygen", "name": "HeyGen", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "video minute", "notes": "Subscription-based. Enter monthly plan and included minutes." },
+    { "id": "synthesia", "name": "Synthesia", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "video minute", "notes": "Subscription-based. Use manual plan price and included minutes." },
+    { "id": "kling-cn", "name": "Kling / 可灵", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Set pricing manually from the plan you are using." },
+    { "id": "hailuo", "name": "Hailuo AI / 海螺", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Pricing varies by pack and region; use custom input." },
+    { "id": "jimeng", "name": "Jimeng / 即梦", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Manual pricing recommended." },
+    { "id": "vidu", "name": "Vidu / 生数科技", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Enter current credit price or subscription cost." },
+    { "id": "wanxiang", "name": "Wanxiang / 通义万相", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Use custom pricing until official rates are verified." },
+    { "id": "hunyuan-video", "name": "Tencent Hunyuan Video / 腾讯混元视频", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "10-second generation credit", "notes": "Manual pricing recommended for current Tencent plan." }
+  ]
+}

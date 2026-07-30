@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-label="Tokencost live preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="emerald" x1="120" y1="110" x2="510" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="indigo" x1="650" y1="130" x2="1050" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="180" cy="130" r="140" fill="#10B981" fill-opacity=".12"/>
+  <circle cx="980" cy="100" r="180" fill="#6366F1" fill-opacity=".16"/>
+  <circle cx="980" cy="520" r="210" fill="#10B981" fill-opacity=".08"/>
+  <rect x="84" y="76" width="1032" height="478" rx="36" fill="#0B1324" fill-opacity=".72" stroke="#334155" stroke-opacity=".8"/>
+  <rect x="124" y="124" width="150" height="32" rx="16" fill="#10B981" fill-opacity=".18" stroke="#34D399" stroke-opacity=".45"/>
+  <text x="145" y="146" fill="#D1FAE5" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing=".08em">2026 EDITION</text>
+  <text x="124" y="232" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">AI Agent Workflow</text>
+  <text x="124" y="294" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">&amp; Smart Cost Simulator</text>
+  <text x="124" y="350" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500">Live LLM pricing, prompt caching, reasoning tokens, and route-to-cheaper-model advice.</text>
+  <g transform="translate(124 392)">
+    <rect width="220" height="52" rx="16" fill="url(#emerald)"/>
+    <text x="30" y="33" fill="#04130F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Live pricing from GitHub</text>
+  </g>
+  <g transform="translate(372 392)">
+    <rect width="230" height="52" rx="16" fill="url(#indigo)"/>
+    <text x="34" y="33" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Compare agent workflows</text>
+  </g>
+  <rect x="764" y="142" width="244" height="264" rx="24" fill="#0F172A" stroke="#334155"/>
+  <path d="M806 340L848 280L890 308L936 242L978 264" stroke="#34D399" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="806" cy="340" r="8" fill="#34D399"/>
+  <circle cx="848" cy="280" r="8" fill="#34D399"/>
+  <circle cx="890" cy="308" r="8" fill="#34D399"/>
+  <circle cx="936" cy="242" r="8" fill="#34D399"/>
+  <circle cx="978" cy="264" r="8" fill="#34D399"/>
+  <text x="796" y="388" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Token cost trend</text>
+</svg>

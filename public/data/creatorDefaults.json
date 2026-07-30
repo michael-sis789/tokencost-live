@@ -1,0 +1,16 @@
+{
+  "updatedAt": "2026-06-24",
+  "disclaimer": "Creator economics vary by niche, platform, and sponsorship inventory. Treat these as planning numbers, not guarantees.",
+  "defaults": {
+    "videosPerMonth": 20,
+    "aiImageCostPerVideo": 1.2,
+    "aiVoiceCostPerVideo": 1.8,
+    "aiMusicCostPerVideo": 1.0,
+    "aiVideoCostPerVideo": 6.5,
+    "editingToolCostPerVideo": 0.8,
+    "viewsPerVideo": 25000,
+    "rpm": 4.5,
+    "affiliateIncomeMonthly": 400,
+    "sponsorshipIncomeMonthly": 1200
+  }
+}

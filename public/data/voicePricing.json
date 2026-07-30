@@ -1,0 +1,17 @@
+{
+  "updatedAt": "2026-06-24",
+  "disclaimer": "Voice and dubbing pricing changes often. Verify official pricing before using these estimates for production or client quotes.",
+  "tools": [
+    { "id": "elevenlabs", "name": "ElevenLabs", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "1k characters or monthly plan", "notes": "Enter your chosen plan price or per-character cost." },
+    { "id": "murf", "name": "Murf", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "voice minute", "notes": "Subscription or per-minute plan; use manual input." },
+    { "id": "playht", "name": "PlayHT", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "1k characters or monthly plan", "notes": "Verify current plan pricing and enter it manually." },
+    { "id": "speechify", "name": "Speechify", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "voice minute", "notes": "Use your own plan price or custom per-minute cost." },
+    { "id": "azure-tts", "name": "Azure TTS", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "1M characters or minute", "notes": "Enter current cloud TTS rate manually." },
+    { "id": "google-tts", "name": "Google Cloud TTS", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "1M characters or minute", "notes": "Use the exact official rate you are buying." },
+    { "id": "openai-tts", "name": "OpenAI TTS", "region": "Western", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "1M characters or minute", "notes": "Enter the current OpenAI audio price you are using." },
+    { "id": "minimax-audio", "name": "Minimax Audio", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "voice minute", "notes": "Set manual pricing from your current plan." },
+    { "id": "bytedance-tts", "name": "ByteDance / Volcano Engine TTS", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "1M characters or minute", "notes": "Cloud pricing varies; enter your verified rate." },
+    { "id": "tencent-tts", "name": "Tencent Cloud TTS", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "1M characters or minute", "notes": "Use the latest Tencent cloud pricing you have verified." },
+    { "id": "alibaba-tts", "name": "Alibaba Cloud TTS", "region": "China", "pricingMode": "custom", "recommendedMode": "custom", "unitLabel": "1M characters or minute", "notes": "Manual pricing recommended." }
+  ]
+}

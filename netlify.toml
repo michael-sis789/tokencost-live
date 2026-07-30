@@ -1,0 +1,36 @@
+[build]
+  publish = "public"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# ADSENSE_QUALITY_REDIRECTS
+[[redirects]]
+  from = "/tools/openai-token-calculator/"
+  to = "/pricing-research/llm-api-cost-guide/"
+  status = 301
+[[redirects]]
+  from = "/openai-ai-agent-cost-calculator.html"
+  to = "/pricing-research/llm-api-cost-guide/"
+  status = 301
+[[redirects]]
+  from = "/claude-ai-agent-cost-calculator.html"
+  to = "/pricing-research/realistic-model-cost-comparison/"
+  status = 301
+[[redirects]]
+  from = "/deepseek-ai-agent-cost-calculator.html"
+  to = "/pricing-research/realistic-model-cost-comparison/"
+  status = 301
+[[redirects]]
+  from = "/gemini-ai-agent-cost-calculator.html"
+  to = "/pricing-research/realistic-model-cost-comparison/"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

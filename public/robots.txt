@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /*?test=true
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+Sitemap: https://tokencost.live/sitemap.xml

@@ -1,0 +1,1222 @@
+[
+  {
+    "provider": "Amazon",
+    "model": "amazon-nova-micro",
+    "name": "Amazon Nova Micro",
+    "input_per_1m": 0.035,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.14,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/amazon.json"
+  },
+  {
+    "provider": "Amazon",
+    "model": "amazon-nova-lite",
+    "name": "Amazon Nova Lite",
+    "input_per_1m": 0.06,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.24,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/amazon.json"
+  },
+  {
+    "provider": "Amazon",
+    "model": "amazon-nova-pro",
+    "name": "Amazon Nova Pro",
+    "input_per_1m": 0.8,
+    "cached_input_per_1m": null,
+    "output_per_1m": 3.2,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/amazon.json"
+  },
+  {
+    "provider": "Amazon",
+    "model": "amazon-nova-premier",
+    "name": "Amazon Nova Premier",
+    "input_per_1m": 2.5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 12.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/amazon.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-3.7-sonnet",
+    "name": "Claude 3.7 Sonnet",
+    "input_per_1m": 3,
+    "cached_input_per_1m": null,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-3.5-sonnet",
+    "name": "Claude 3.5 Sonnet",
+    "input_per_1m": 3,
+    "cached_input_per_1m": null,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-3-opus",
+    "name": "Claude 3 Opus",
+    "input_per_1m": 15,
+    "cached_input_per_1m": null,
+    "output_per_1m": 75,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-3-haiku",
+    "name": "Claude 3 Haiku",
+    "input_per_1m": 0.25,
+    "cached_input_per_1m": null,
+    "output_per_1m": 1.25,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-3.5-haiku",
+    "name": "Claude 3.5 Haiku",
+    "input_per_1m": 0.8,
+    "cached_input_per_1m": null,
+    "output_per_1m": 4,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-4.5-haiku",
+    "name": "Claude 4.5 Haiku",
+    "input_per_1m": 1,
+    "cached_input_per_1m": null,
+    "output_per_1m": 5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-sonnet-4.5",
+    "name": "Claude Sonnet 4 and 4.5 ≤200k",
+    "input_per_1m": 3,
+    "cached_input_per_1m": null,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-sonnet-4.5-200k",
+    "name": "Claude Sonnet 4 and 4.5 >200k",
+    "input_per_1m": 6,
+    "cached_input_per_1m": null,
+    "output_per_1m": 22.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-sonnet-5",
+    "name": "Claude Sonnet 5",
+    "input_per_1m": 3,
+    "cached_input_per_1m": null,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-opus-4",
+    "name": "Claude Opus 4",
+    "input_per_1m": 15,
+    "cached_input_per_1m": null,
+    "output_per_1m": 75,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-opus-4-1",
+    "name": "Claude Opus 4.1",
+    "input_per_1m": 15,
+    "cached_input_per_1m": null,
+    "output_per_1m": 75,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-opus-4-5",
+    "name": "Claude Opus 4.5",
+    "input_per_1m": 5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 25,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-opus-4-6",
+    "name": "Claude Opus 4.6",
+    "input_per_1m": 5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 25,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-opus-4-7",
+    "name": "Claude Opus 4.7",
+    "input_per_1m": 5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 25,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-opus-4-8",
+    "name": "Claude Opus 4.8",
+    "input_per_1m": 5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 25,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-fable-5",
+    "name": "Claude Fable 5",
+    "input_per_1m": 10,
+    "cached_input_per_1m": null,
+    "output_per_1m": 50,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-mythos-5",
+    "name": "Claude Mythos 5",
+    "input_per_1m": 10,
+    "cached_input_per_1m": null,
+    "output_per_1m": 50,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "DeepSeek",
+    "model": "deepseek-v4-flash",
+    "name": "DeepSeek-V4-Flash",
+    "input_per_1m": 0.14,
+    "cached_input_per_1m": 0.028,
+    "output_per_1m": 0.28,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json"
+  },
+  {
+    "provider": "DeepSeek",
+    "model": "deepseek-v4-pro",
+    "name": "DeepSeek-V4-Pro",
+    "input_per_1m": 1.74,
+    "cached_input_per_1m": 0.145,
+    "output_per_1m": 3.48,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json"
+  },
+  {
+    "provider": "DeepSeek",
+    "model": "deepseek-chat",
+    "name": "DeepSeek Chat",
+    "input_per_1m": 0.27,
+    "cached_input_per_1m": null,
+    "output_per_1m": 1.1,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json"
+  },
+  {
+    "provider": "DeepSeek",
+    "model": "deepseek-reasoner",
+    "name": "DeepSeek Reasoner",
+    "input_per_1m": 0.55,
+    "cached_input_per_1m": null,
+    "output_per_1m": 2.19,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-2.5-pro-preview-03-25",
+    "name": "Gemini 2.5 Pro Preview ≤200k",
+    "input_per_1m": 1.25,
+    "cached_input_per_1m": null,
+    "output_per_1m": 10,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-2.5-pro-preview-03-25-200k",
+    "name": "Gemini 2.5 Pro Preview >200k",
+    "input_per_1m": 2.5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-2.0-flash-lite",
+    "name": "Gemini 2.0 Flash Lite",
+    "input_per_1m": 0.075,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.3,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-2.0-flash",
+    "name": "Gemini 2.0 Flash",
+    "input_per_1m": 0.1,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.4,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-1.5-flash",
+    "name": "Gemini 1.5 Flash ≤128k",
+    "input_per_1m": 0.075,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.3,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-1.5-flash-128k",
+    "name": "Gemini 1.5 Flash >128k",
+    "input_per_1m": 0.15,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.6,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-1.5-flash-8b",
+    "name": "Gemini 1.5 Flash-8B ≤128k",
+    "input_per_1m": 0.0375,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-1.5-flash-8b-128k",
+    "name": "Gemini 1.5 Flash-8B >128k",
+    "input_per_1m": 0.075,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.3,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-1.5-pro",
+    "name": "Gemini 1.5 Pro ≤128k",
+    "input_per_1m": 1.25,
+    "cached_input_per_1m": null,
+    "output_per_1m": 5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-1.5-pro-128k",
+    "name": "Gemini 1.5 Pro >128k",
+    "input_per_1m": 2.5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 10,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-2.5-flash",
+    "name": "Gemini 2.5 Flash",
+    "input_per_1m": 0.3,
+    "cached_input_per_1m": 0.03,
+    "output_per_1m": 2.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-2.5-flash-lite",
+    "name": "Gemini 2.5 Flash-Lite",
+    "input_per_1m": 0.1,
+    "cached_input_per_1m": 0.01,
+    "output_per_1m": 0.4,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-2.5-flash-preview-09-2025",
+    "name": "Gemini 2.5 Flash Preview (09-2025)",
+    "input_per_1m": 0.3,
+    "cached_input_per_1m": 0.03,
+    "output_per_1m": 2.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-2.5-pro",
+    "name": "Gemini 2.5 Pro ≤200k",
+    "input_per_1m": 1.25,
+    "cached_input_per_1m": 0.125,
+    "output_per_1m": 10,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-2.5-pro-200k",
+    "name": "Gemini 2.5 Pro >200k",
+    "input_per_1m": 2.5,
+    "cached_input_per_1m": 0.25,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-3-pro-preview",
+    "name": "Gemini 3 Pro ≤200k",
+    "input_per_1m": 2,
+    "cached_input_per_1m": null,
+    "output_per_1m": 12,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-3-pro-preview-200k",
+    "name": "Gemini 3 Pro >200k",
+    "input_per_1m": 4,
+    "cached_input_per_1m": null,
+    "output_per_1m": 18,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-3-flash-preview",
+    "name": "Gemini 3 Flash Preview",
+    "input_per_1m": 0.5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 3,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-3-1-pro-preview",
+    "name": "Gemini 3.1 Pro ≤200k",
+    "input_per_1m": 2,
+    "cached_input_per_1m": null,
+    "output_per_1m": 12,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-3-1-pro-preview-200k",
+    "name": "Gemini 3.1 Pro >200k",
+    "input_per_1m": 4,
+    "cached_input_per_1m": null,
+    "output_per_1m": 18,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-3.1-flash-lite-preview",
+    "name": "Gemini 3.1 Flash-Lite",
+    "input_per_1m": 0.25,
+    "cached_input_per_1m": 0.025,
+    "output_per_1m": 1.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "Google",
+    "model": "gemini-3.5-flash",
+    "name": "Gemini 3.5 Flash",
+    "input_per_1m": 1.5,
+    "cached_input_per_1m": 0.15,
+    "output_per_1m": 9,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "meta-ai",
+    "model": "muse-spark-1.1",
+    "name": "Muse Spark 1.1",
+    "input_per_1m": 1.25,
+    "cached_input_per_1m": 0.15,
+    "output_per_1m": 4.25,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/meta-ai.json"
+  },
+  {
+    "provider": "minimax",
+    "model": "minimax-m2",
+    "name": "MiniMax M2",
+    "input_per_1m": 0.3,
+    "cached_input_per_1m": null,
+    "output_per_1m": 1.2,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/minimax.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "pixtral-12b",
+    "name": "Pixtral 12B",
+    "input_per_1m": 0.15,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "mistral-small-latest",
+    "name": "Mistral Small 3.1",
+    "input_per_1m": 0.1,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.3,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "mistral-medium-2505",
+    "name": "Mistral Medium 3",
+    "input_per_1m": 0.4,
+    "cached_input_per_1m": null,
+    "output_per_1m": 2,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "mistral-nemo",
+    "name": "Mistral NeMo",
+    "input_per_1m": 0.15,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "open-mistral-7b",
+    "name": "Mistral 7B",
+    "input_per_1m": 0.25,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.25,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "open-mixtral-8x7b",
+    "name": "Mixtral 8x7B",
+    "input_per_1m": 0.7,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.7,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "open-mixtral-8x22b",
+    "name": "Mixtral 8x22B",
+    "input_per_1m": 2,
+    "cached_input_per_1m": null,
+    "output_per_1m": 6,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "mistral-large-latest",
+    "name": "Mistral Large 24.11",
+    "input_per_1m": 2,
+    "cached_input_per_1m": null,
+    "output_per_1m": 6,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "pixtral-large-latest",
+    "name": "Pixtral Large",
+    "input_per_1m": 2,
+    "cached_input_per_1m": null,
+    "output_per_1m": 6,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "mistral-saba-latest",
+    "name": "Mistral Saba",
+    "input_per_1m": 0.2,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.6,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "codestral-latest",
+    "name": "Codestral",
+    "input_per_1m": 0.3,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.9,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "ministral-8b-latest",
+    "name": "Ministral 8B 24.10",
+    "input_per_1m": 0.1,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.1,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "ministral-3b-latest",
+    "name": "Ministral 3B 24.10",
+    "input_per_1m": 0.04,
+    "cached_input_per_1m": null,
+    "output_per_1m": 0.04,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "Mistral",
+    "model": "magistral-medium-latest",
+    "name": "Magistral Medium",
+    "input_per_1m": 2,
+    "cached_input_per_1m": null,
+    "output_per_1m": 5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json"
+  },
+  {
+    "provider": "moonshot-ai",
+    "model": "kimi-k2-0905-preview",
+    "name": "Kimi K2 0905 Preview",
+    "input_per_1m": 0.6,
+    "cached_input_per_1m": 0.15,
+    "output_per_1m": 2.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json"
+  },
+  {
+    "provider": "moonshot-ai",
+    "model": "kimi-k2-0711-preview",
+    "name": "Kimi K2 0711 Preview",
+    "input_per_1m": 0.6,
+    "cached_input_per_1m": 0.15,
+    "output_per_1m": 2.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json"
+  },
+  {
+    "provider": "moonshot-ai",
+    "model": "kimi-k2-turbo-preview",
+    "name": "Kimi K2 Turbo Preview",
+    "input_per_1m": 1.15,
+    "cached_input_per_1m": 0.15,
+    "output_per_1m": 8,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json"
+  },
+  {
+    "provider": "moonshot-ai",
+    "model": "kimi-k2-thinking",
+    "name": "Kimi K2 Thinking",
+    "input_per_1m": 0.6,
+    "cached_input_per_1m": 0.15,
+    "output_per_1m": 2.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json"
+  },
+  {
+    "provider": "moonshot-ai",
+    "model": "kimi-k2-thinking-turbo",
+    "name": "Kimi K2 Thinking Turbo",
+    "input_per_1m": 1.15,
+    "cached_input_per_1m": 0.15,
+    "output_per_1m": 8,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "text-davinci-003",
+    "name": "GPT-3 Text Davinci 003",
+    "input_per_1m": 20,
+    "cached_input_per_1m": null,
+    "output_per_1m": 20,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-4.5",
+    "name": "GPT-4.5",
+    "input_per_1m": 75,
+    "cached_input_per_1m": 37.5,
+    "output_per_1m": 150,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-4o",
+    "name": "GPT-4o",
+    "input_per_1m": 2.5,
+    "cached_input_per_1m": 1.25,
+    "output_per_1m": 10,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-4o-mini",
+    "name": "GPT-4o Mini",
+    "input_per_1m": 0.15,
+    "cached_input_per_1m": 0.075,
+    "output_per_1m": 0.6,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "chatgpt-4o-latest",
+    "name": "ChatGPT 4o Latest",
+    "input_per_1m": 5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o1-preview",
+    "name": "o1 and o1-preview",
+    "input_per_1m": 15,
+    "cached_input_per_1m": 7.5,
+    "output_per_1m": 60,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o1-pro",
+    "name": "o1 Pro",
+    "input_per_1m": 150,
+    "cached_input_per_1m": null,
+    "output_per_1m": 600,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o1-mini",
+    "name": "o1-mini",
+    "input_per_1m": 1.1,
+    "cached_input_per_1m": 0.55,
+    "output_per_1m": 4.4,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o3-mini",
+    "name": "o3-mini",
+    "input_per_1m": 1.1,
+    "cached_input_per_1m": 0.55,
+    "output_per_1m": 4.4,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-4.1",
+    "name": "GPT-4.1",
+    "input_per_1m": 2,
+    "cached_input_per_1m": 0.5,
+    "output_per_1m": 8,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-4.1-mini",
+    "name": "GPT-4.1 Mini",
+    "input_per_1m": 0.4,
+    "cached_input_per_1m": 0.1,
+    "output_per_1m": 1.6,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-4.1-nano",
+    "name": "GPT-4.1 Nano",
+    "input_per_1m": 0.1,
+    "cached_input_per_1m": 0.025,
+    "output_per_1m": 0.4,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o3",
+    "name": "o3",
+    "input_per_1m": 10,
+    "cached_input_per_1m": 0.5,
+    "output_per_1m": 40,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o4-mini",
+    "name": "o4-mini",
+    "input_per_1m": 1.1,
+    "cached_input_per_1m": 0.275,
+    "output_per_1m": 4.4,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5-nano",
+    "name": "GPT-5 Nano",
+    "input_per_1m": 0.05,
+    "cached_input_per_1m": 0.005,
+    "output_per_1m": 0.4,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5-mini",
+    "name": "GPT-5 Mini",
+    "input_per_1m": 0.25,
+    "cached_input_per_1m": 0.025,
+    "output_per_1m": 2,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5",
+    "name": "GPT-5",
+    "input_per_1m": 1.25,
+    "cached_input_per_1m": 0.125,
+    "output_per_1m": 10,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-image-1",
+    "name": "gpt-image-1 (image gen)",
+    "input_per_1m": 10,
+    "cached_input_per_1m": 1.25,
+    "output_per_1m": 40,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-image-1-mini",
+    "name": "gpt-image-1-mini (image gen)",
+    "input_per_1m": 2,
+    "cached_input_per_1m": 0.2,
+    "output_per_1m": 8,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-image-2-image",
+    "name": "gpt-image-2 (image gen) image tokens",
+    "input_per_1m": 8,
+    "cached_input_per_1m": 2,
+    "output_per_1m": 30,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-image-2-text",
+    "name": "gpt-image-2 (image gen) text tokens",
+    "input_per_1m": 5,
+    "cached_input_per_1m": 1.25,
+    "output_per_1m": 10,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5-pro",
+    "name": "GPT-5 Pro",
+    "input_per_1m": 15,
+    "cached_input_per_1m": null,
+    "output_per_1m": 120,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o3-pro",
+    "name": "o3 Pro",
+    "input_per_1m": 20,
+    "cached_input_per_1m": null,
+    "output_per_1m": 80,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o4-mini-deep-research",
+    "name": "o4-mini Deep Research",
+    "input_per_1m": 2,
+    "cached_input_per_1m": 0.5,
+    "output_per_1m": 8,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o3-deep-research",
+    "name": "o3 Deep Research",
+    "input_per_1m": 10,
+    "cached_input_per_1m": 2.5,
+    "output_per_1m": 40,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.1-codex-mini",
+    "name": "GPT-5.1 Codex mini",
+    "input_per_1m": 0.25,
+    "cached_input_per_1m": 0.025,
+    "output_per_1m": 2,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.1-codex",
+    "name": "GPT-5.1 Codex",
+    "input_per_1m": 1.25,
+    "cached_input_per_1m": 0.125,
+    "output_per_1m": 10,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.1",
+    "name": "GPT-5.1",
+    "input_per_1m": 1.25,
+    "cached_input_per_1m": 0.125,
+    "output_per_1m": 10,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.2",
+    "name": "GPT-5.2",
+    "input_per_1m": 1.75,
+    "cached_input_per_1m": 0.175,
+    "output_per_1m": 14,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.2-pro",
+    "name": "GPT-5.2 Pro",
+    "input_per_1m": 21,
+    "cached_input_per_1m": null,
+    "output_per_1m": 168,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.4",
+    "name": "GPT-5.4 ≤272k",
+    "input_per_1m": 2.5,
+    "cached_input_per_1m": 0.25,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.4-272k",
+    "name": "GPT-5.4 >272k",
+    "input_per_1m": 5,
+    "cached_input_per_1m": 0.5,
+    "output_per_1m": 22.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.4-pro",
+    "name": "GPT-5.4 Pro ≤272k",
+    "input_per_1m": 30,
+    "cached_input_per_1m": null,
+    "output_per_1m": 180,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.4-pro-272k",
+    "name": "GPT-5.4 Pro >272k",
+    "input_per_1m": 60,
+    "cached_input_per_1m": null,
+    "output_per_1m": 270,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.4-mini",
+    "name": "GPT-5.4 Mini",
+    "input_per_1m": 0.75,
+    "cached_input_per_1m": 0.075,
+    "output_per_1m": 4.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.4-nano",
+    "name": "GPT-5.4 Nano",
+    "input_per_1m": 0.2,
+    "cached_input_per_1m": 0.02,
+    "output_per_1m": 1.25,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.5",
+    "name": "GPT-5.5 ≤272k",
+    "input_per_1m": 5,
+    "cached_input_per_1m": 0.5,
+    "output_per_1m": 30,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.5-272k",
+    "name": "GPT-5.5 >272k",
+    "input_per_1m": 10,
+    "cached_input_per_1m": 1,
+    "output_per_1m": 45,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.5-pro",
+    "name": "GPT-5.5 Pro ≤272k",
+    "input_per_1m": 30,
+    "cached_input_per_1m": null,
+    "output_per_1m": 180,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.6-sol",
+    "name": "GPT-5.6 Sol",
+    "input_per_1m": 5,
+    "cached_input_per_1m": 0.5,
+    "output_per_1m": 30,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.6-terra",
+    "name": "GPT-5.6 Terra",
+    "input_per_1m": 2.5,
+    "cached_input_per_1m": 0.25,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "OpenAI",
+    "model": "gpt-5.6-luna",
+    "name": "GPT-5.6 Luna",
+    "input_per_1m": 1,
+    "cached_input_per_1m": 0.1,
+    "output_per_1m": 6,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json"
+  },
+  {
+    "provider": "Qwen",
+    "model": "qwen3.6-plus",
+    "name": "Qwen3.6 Plus ≤256k",
+    "input_per_1m": 0.5,
+    "cached_input_per_1m": null,
+    "output_per_1m": 3,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/qwen.json"
+  },
+  {
+    "provider": "Qwen",
+    "model": "qwen3.6-plus-256k",
+    "name": "Qwen3.6 Plus >256k",
+    "input_per_1m": 2,
+    "cached_input_per_1m": null,
+    "output_per_1m": 6,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/qwen.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-3",
+    "name": "Grok 3",
+    "input_per_1m": 3,
+    "cached_input_per_1m": 0.75,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-3-mini",
+    "name": "Grok 3 Mini",
+    "input_per_1m": 0.3,
+    "cached_input_per_1m": 0.075,
+    "output_per_1m": 0.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-4-fast",
+    "name": "Grok 4 Fast",
+    "input_per_1m": 0.2,
+    "cached_input_per_1m": 0.05,
+    "output_per_1m": 0.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-4",
+    "name": "Grok 4 ≤128k",
+    "input_per_1m": 3,
+    "cached_input_per_1m": 0.75,
+    "output_per_1m": 15,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-4-128k",
+    "name": "Grok 4 >128k",
+    "input_per_1m": 6,
+    "cached_input_per_1m": 0.75,
+    "output_per_1m": 30,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-4-fast",
+    "name": "Grok 4 Fast ≤128k",
+    "input_per_1m": 0.2,
+    "cached_input_per_1m": 0.05,
+    "output_per_1m": 0.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-4-fast-128k",
+    "name": "Grok 4 Fast >128k",
+    "input_per_1m": 0.4,
+    "cached_input_per_1m": 0.05,
+    "output_per_1m": 1,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-4-fast-reasoning",
+    "name": "Grok 4 Fast Reasoning ≤128k",
+    "input_per_1m": 0.2,
+    "cached_input_per_1m": 0.05,
+    "output_per_1m": 0.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-4-fast-reasoning-128k",
+    "name": "Grok 4 Fast Reasoning >128k",
+    "input_per_1m": 0.4,
+    "cached_input_per_1m": 0.05,
+    "output_per_1m": 1,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  },
+  {
+    "provider": "xAI",
+    "model": "grok-code-fast-1",
+    "name": "Grok Code Fast 1",
+    "input_per_1m": 0.2,
+    "cached_input_per_1m": 0.02,
+    "output_per_1m": 1.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json"
+  }
+]

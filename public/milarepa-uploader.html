@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Milarepa Video Uploader</title>
+  <meta name="description" content="A desktop publishing assistant for sending original Milarepa story videos to TikTok as creator-reviewed drafts.">
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #172033; background: #f5f7fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { width: min(760px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 64px; }
+    header { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: center; padding-bottom: 28px; border-bottom: 1px solid #d9dee8; }
+    img { width: 96px; height: 96px; border-radius: 8px; }
+    h1 { margin: 0; font-size: 32px; letter-spacing: 0; }
+    h2 { margin: 32px 0 12px; font-size: 20px; letter-spacing: 0; }
+    p, li { line-height: 1.65; }
+    .muted { margin: 8px 0 0; color: #596579; }
+    .flow { display: grid; gap: 1px; padding: 0; list-style: none; border: 1px solid #d9dee8; border-radius: 8px; overflow: hidden; background: #d9dee8; }
+    .flow li { padding: 15px 18px; background: white; }
+    footer { display: flex; gap: 18px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #d9dee8; font-size: 14px; }
+    a { color: #0b62c4; }
+    @media (max-width: 520px) { header { grid-template-columns: 72px 1fr; } img { width: 72px; height: 72px; } h1 { font-size: 25px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="/milarepa-uploader-icon.png" alt="Milarepa Video Uploader mountain and lamp icon">
+      <div>
+        <h1>Milarepa Video Uploader</h1>
+        <p class="muted">Creator-controlled desktop draft publishing for original Buddhist story videos.</p>
+      </div>
+    </header>
+
+    <h2>Purpose</h2>
+    <p>Milarepa Video Uploader helps an authorized creator send locally stored MP4 videos to their own TikTok account as drafts. It uses TikTok Login Kit and the Content Posting API.</p>
+
+    <h2>Creator flow</h2>
+    <ol class="flow">
+      <li>The creator signs in to TikTok and explicitly grants profile and draft-upload access.</li>
+      <li>The creator selects an original MP4 file stored on their computer.</li>
+      <li>The uploader sends the file directly to TikTok using the official file-upload endpoint.</li>
+      <li>TikTok notifies the creator that the draft is ready.</li>
+      <li>The creator reviews the caption and settings inside TikTok and chooses whether to publish.</li>
+    </ol>
+
+    <h2>Data handling</h2>
+    <p>OAuth tokens are stored only on the creator's computer. Video files are transmitted directly to TikTok and are not retained on our website or a third-party storage service.</p>
+
+    <footer>
+      <a href="/milarepa-uploader-terms.html">Terms of Service</a>
+      <a href="/milarepa-uploader-privacy.html">Privacy Policy</a>
+    </footer>
+  </main>
+</body>
+</html>

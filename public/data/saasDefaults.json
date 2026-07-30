@@ -1,0 +1,20 @@
+{
+  "updatedAt": "2026-06-24",
+  "disclaimer": "SaaS profit assumptions should be verified against your own funnel, churn, and invoice data.",
+  "defaults": {
+    "monthlyUsers": 20000,
+    "freeUserPct": 82,
+    "paidUserPct": 18,
+    "subscriptionPrice": 19,
+    "apiCostPerUser": 0.22,
+    "hostingCost": 180,
+    "databaseCost": 120,
+    "storageCost": 60,
+    "paymentFeePct": 4,
+    "visitsPerUser": 5,
+    "adRevenuePer1000Visits": 2.5,
+    "marketingCost": 1500,
+    "teamCost": 4500,
+    "churnPct": 6
+  }
+}
