@@ -10,8 +10,16 @@
 
 # ADSENSE_QUALITY_REDIRECTS
 [[redirects]]
+  from = "/ads.text"
+  to = "/ads.txt"
+  status = 301
+[[redirects]]
   from = "/tools/openai-token-calculator/"
   to = "/pricing-research/llm-api-cost-guide/"
+  status = 301
+[[redirects]]
+  from = "/ai-agent-cost-calculator.html"
+  to = "/"
   status = 301
 [[redirects]]
   from = "/openai-ai-agent-cost-calculator.html"
@@ -28,6 +36,26 @@
 [[redirects]]
   from = "/gemini-ai-agent-cost-calculator.html"
   to = "/pricing-research/realistic-model-cost-comparison/"
+  status = 301
+[[redirects]]
+  from = "/tools/*"
+  to = "/calculators/"
+  status = 301
+[[redirects]]
+  from = "/compare/*"
+  to = "/pricing-research/realistic-model-cost-comparison/"
+  status = 301
+[[redirects]]
+  from = "/guides/*"
+  to = "/pricing-research/"
+  status = 301
+[[redirects]]
+  from = "/ai-cost-guides/*"
+  to = "/guides/"
+  status = 301
+[[redirects]]
+  from = "/author/"
+  to = "/about/"
   status = 301
 
 [[redirects]]
