@@ -1,5 +1,5 @@
 {
-  "last_verified": "2026-07-30",
+  "last_verified": "2026-08-07",
   "verification_policy": "LLM price rows are synced daily from simonw/llm-prices where available. Kimi rows use the official Kimi platform page because Kimi K3 pricing is currently visible there. Users should verify linked sources before procurement or client quotes.",
   "currency_note": "USD rows are used in scenario calculations. CNY rows are displayed as source pricing and are not converted without an explicit exchange-rate source.",
   "models": [
@@ -15,7 +15,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -31,7 +31,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -47,7 +47,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -63,7 +63,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -79,7 +79,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -95,7 +95,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -111,7 +111,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -127,7 +127,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -143,7 +143,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -159,7 +159,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -175,7 +175,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -191,7 +191,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -207,7 +207,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -223,7 +223,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json",
       "effective_date": "2025-02-08",
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -238,7 +238,7 @@
       "unit": "1M tokens",
       "source_url": "https://platform.kimi.com/",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "official_source_checked",
       "notes": "Official Kimi platform lists K3 cache-hit ¥2/MTok, input ¥20/MTok, output ¥100/MTok."
     },
@@ -253,7 +253,7 @@
       "unit": "1M tokens",
       "source_url": "https://platform.kimi.com/",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "official_source_checked",
       "notes": "Official Kimi platform lists K2.7 Code cache-hit ¥1.30/MTok, input ¥6.50/MTok, output ¥27/MTok."
     },
@@ -268,7 +268,7 @@
       "unit": "1M tokens",
       "source_url": "https://platform.kimi.com/",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "official_source_checked",
       "notes": "Official Kimi platform lists K2.6 cache-hit ¥1.10/MTok, input ¥6.50/MTok, output ¥27/MTok."
     }
@@ -313,7 +313,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/amazon.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -329,7 +329,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/amazon.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -345,7 +345,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/amazon.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -361,7 +361,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/amazon.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -377,7 +377,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -393,7 +393,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -409,7 +409,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -425,7 +425,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -441,7 +441,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -457,7 +457,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -473,7 +473,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -489,7 +489,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -505,7 +505,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": "2026-09-01",
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -521,7 +521,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -537,7 +537,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -553,7 +553,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -569,7 +569,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -585,7 +585,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -601,7 +601,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -617,7 +617,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -633,7 +633,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -649,7 +649,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -665,7 +665,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -681,7 +681,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json",
       "effective_date": "2025-02-08",
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -697,7 +697,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/deepseek.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -713,7 +713,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -729,7 +729,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -745,7 +745,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -761,7 +761,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -777,7 +777,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -793,7 +793,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -809,7 +809,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -825,7 +825,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -841,7 +841,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -857,7 +857,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -873,7 +873,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -889,7 +889,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -905,7 +905,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -921,7 +921,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -937,7 +937,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -953,7 +953,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -969,7 +969,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -985,7 +985,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1001,7 +1001,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1017,7 +1017,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1033,7 +1033,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1049,7 +1049,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1065,7 +1065,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1081,7 +1081,39 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "meta-ai",
+      "vendor": "meta-ai",
+      "model": "muse-spark-1.2-contributor",
+      "name": "Muse Spark 1.2 Contributor",
+      "input_per_1m": 0.1,
+      "cached_input_per_1m": 0.002,
+      "output_per_1m": 0.2,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/meta-ai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "meta-ai",
+      "vendor": "meta-ai",
+      "model": "muse-spark-1.2",
+      "name": "Muse Spark 1.2",
+      "input_per_1m": 1.25,
+      "cached_input_per_1m": 0.15,
+      "output_per_1m": 4.25,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/meta-ai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1097,7 +1129,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/meta-ai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1113,7 +1145,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/minimax.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1129,7 +1161,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1145,7 +1177,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1161,7 +1193,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1177,7 +1209,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1193,7 +1225,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1209,7 +1241,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1225,7 +1257,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1241,7 +1273,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1257,7 +1289,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1273,7 +1305,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1289,7 +1321,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1305,7 +1337,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1321,7 +1353,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1337,7 +1369,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/mistral.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1353,7 +1385,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1369,7 +1401,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1385,7 +1417,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1401,7 +1433,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1417,7 +1449,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/moonshot-ai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1433,7 +1465,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1449,7 +1481,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1465,7 +1497,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1481,7 +1513,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1497,7 +1529,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1513,7 +1545,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1529,7 +1561,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1545,7 +1577,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1561,7 +1593,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1577,7 +1609,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1593,7 +1625,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1609,7 +1641,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1625,7 +1657,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1641,7 +1673,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1657,7 +1689,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1673,7 +1705,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1689,7 +1721,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1705,7 +1737,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1721,7 +1753,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1737,7 +1769,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1753,7 +1785,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1769,7 +1801,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1785,7 +1817,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1801,7 +1833,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1817,7 +1849,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1833,7 +1865,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1849,7 +1881,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1865,7 +1897,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1881,7 +1913,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1897,7 +1929,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1913,7 +1945,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1929,7 +1961,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1945,7 +1977,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1961,7 +1993,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1977,7 +2009,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -1993,7 +2025,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2009,7 +2041,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2025,7 +2057,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2041,7 +2073,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2057,7 +2089,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2073,7 +2105,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2089,7 +2121,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2105,7 +2137,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": "2026-07-30",
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2121,7 +2153,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": "2026-07-30",
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2137,7 +2169,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": "2026-07-30",
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2153,7 +2185,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/openai.json",
       "effective_date": "2026-07-30",
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2169,7 +2201,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/qwen.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2185,7 +2217,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/qwen.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2201,7 +2233,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2217,7 +2249,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2233,7 +2265,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2249,7 +2281,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2265,7 +2297,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2281,7 +2313,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2297,7 +2329,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2313,7 +2345,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2329,7 +2361,7 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     },
@@ -2345,81 +2377,280 @@
       "unit": "1M tokens",
       "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
       "effective_date": null,
-      "last_verified": "2026-07-30",
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.5",
+      "name": "Grok 4.5 ≤200k",
+      "input_per_1m": 2,
+      "cached_input_per_1m": 0.3,
+      "output_per_1m": 6,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.5-200k",
+      "name": "Grok 4.5 >200k",
+      "input_per_1m": 4,
+      "cached_input_per_1m": 0.6,
+      "output_per_1m": 12,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-build-0.1",
+      "name": "Grok Build 0.1 ≤200k",
+      "input_per_1m": 1,
+      "cached_input_per_1m": 0.2,
+      "output_per_1m": 2,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-build-0.1-200k",
+      "name": "Grok Build 0.1 >200k",
+      "input_per_1m": 2,
+      "cached_input_per_1m": 0.4,
+      "output_per_1m": 4,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.3",
+      "name": "Grok 4.3 ≤200k",
+      "input_per_1m": 1.25,
+      "cached_input_per_1m": 0.2,
+      "output_per_1m": 2.5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.3-200k",
+      "name": "Grok 4.3 >200k",
+      "input_per_1m": 2.5,
+      "cached_input_per_1m": 0.4,
+      "output_per_1m": 5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.20-multi-agent-0309",
+      "name": "Grok 4.20 Multi-Agent 0309 ≤200k",
+      "input_per_1m": 1.25,
+      "cached_input_per_1m": 0.2,
+      "output_per_1m": 2.5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.20-multi-agent-0309-200k",
+      "name": "Grok 4.20 Multi-Agent 0309 >200k",
+      "input_per_1m": 2.5,
+      "cached_input_per_1m": 0.4,
+      "output_per_1m": 5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.20-0309-reasoning",
+      "name": "Grok 4.20 0309 Reasoning ≤200k",
+      "input_per_1m": 1.25,
+      "cached_input_per_1m": 0.2,
+      "output_per_1m": 2.5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.20-0309-reasoning-200k",
+      "name": "Grok 4.20 0309 Reasoning >200k",
+      "input_per_1m": 2.5,
+      "cached_input_per_1m": 0.4,
+      "output_per_1m": 5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.20-0309-non-reasoning",
+      "name": "Grok 4.20 0309 Non-Reasoning ≤200k",
+      "input_per_1m": 1.25,
+      "cached_input_per_1m": 0.2,
+      "output_per_1m": 2.5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
+      "verification_status": "community_dataset_checked",
+      "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
+    },
+    {
+      "provider": "xAI",
+      "vendor": "xai",
+      "model": "grok-4.20-0309-non-reasoning-200k",
+      "name": "Grok 4.20 0309 Non-Reasoning >200k",
+      "input_per_1m": 2.5,
+      "cached_input_per_1m": 0.4,
+      "output_per_1m": 5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/xai.json",
+      "effective_date": null,
+      "last_verified": "2026-08-07",
       "verification_status": "community_dataset_checked",
       "notes": "Loaded from simonw/llm-prices. Verify official provider pricing before procurement."
     }
   ],
   "latest_sync": {
-    "date": "2026-07-30",
+    "date": "2026-08-07",
     "source": "https://github.com/simonw/llm-prices",
     "source_files_checked": 11,
-    "total_models_checked": 128,
+    "total_models_checked": 142,
     "new_models": [
       {
-        "provider": "Google",
-        "model": "gemini-3.6-flash",
-        "name": "Gemini 3.6 Flash"
+        "provider": "meta-ai",
+        "model": "muse-spark-1.2-contributor",
+        "name": "Muse Spark 1.2 Contributor"
       },
       {
-        "provider": "Google",
-        "model": "gemini-3.5-flash-lite",
-        "name": "Gemini 3.5 Flash-Lite"
+        "provider": "meta-ai",
+        "model": "muse-spark-1.2",
+        "name": "Muse Spark 1.2"
       },
       {
-        "provider": "OpenAI",
-        "model": "gpt-5.5-pro-272k",
-        "name": "GPT-5.5 Pro >272k"
+        "provider": "xAI",
+        "model": "grok-4.5",
+        "name": "Grok 4.5 ≤200k"
       },
       {
-        "provider": "OpenAI",
-        "model": "gpt-5.6-sol-272k",
-        "name": "GPT-5.6 Sol >272k"
+        "provider": "xAI",
+        "model": "grok-4.5-200k",
+        "name": "Grok 4.5 >200k"
       },
       {
-        "provider": "OpenAI",
-        "model": "gpt-5.6-terra-272k",
-        "name": "GPT-5.6 Terra >272k"
+        "provider": "xAI",
+        "model": "grok-build-0.1",
+        "name": "Grok Build 0.1 ≤200k"
       },
       {
-        "provider": "OpenAI",
-        "model": "gpt-5.6-luna-272k",
-        "name": "GPT-5.6 Luna >272k"
+        "provider": "xAI",
+        "model": "grok-build-0.1-200k",
+        "name": "Grok Build 0.1 >200k"
+      },
+      {
+        "provider": "xAI",
+        "model": "grok-4.3",
+        "name": "Grok 4.3 ≤200k"
+      },
+      {
+        "provider": "xAI",
+        "model": "grok-4.3-200k",
+        "name": "Grok 4.3 >200k"
+      },
+      {
+        "provider": "xAI",
+        "model": "grok-4.20-multi-agent-0309",
+        "name": "Grok 4.20 Multi-Agent 0309 ≤200k"
+      },
+      {
+        "provider": "xAI",
+        "model": "grok-4.20-multi-agent-0309-200k",
+        "name": "Grok 4.20 Multi-Agent 0309 >200k"
+      },
+      {
+        "provider": "xAI",
+        "model": "grok-4.20-0309-reasoning",
+        "name": "Grok 4.20 0309 Reasoning ≤200k"
+      },
+      {
+        "provider": "xAI",
+        "model": "grok-4.20-0309-reasoning-200k",
+        "name": "Grok 4.20 0309 Reasoning >200k"
+      },
+      {
+        "provider": "xAI",
+        "model": "grok-4.20-0309-non-reasoning",
+        "name": "Grok 4.20 0309 Non-Reasoning ≤200k"
+      },
+      {
+        "provider": "xAI",
+        "model": "grok-4.20-0309-non-reasoning-200k",
+        "name": "Grok 4.20 0309 Non-Reasoning >200k"
       }
     ],
-    "changed_models": [
-      {
-        "provider": "OpenAI",
-        "model": "gpt-5.6-terra",
-        "previous": {
-          "input_per_1m": 2.5,
-          "cached_input_per_1m": 0.25,
-          "output_per_1m": 15,
-          "currency": "USD"
-        },
-        "current": {
-          "input_per_1m": 2,
-          "cached_input_per_1m": 0.2,
-          "output_per_1m": 12,
-          "currency": "USD"
-        }
-      },
-      {
-        "provider": "OpenAI",
-        "model": "gpt-5.6-luna",
-        "previous": {
-          "input_per_1m": 1,
-          "cached_input_per_1m": 0.1,
-          "output_per_1m": 6,
-          "currency": "USD"
-        },
-        "current": {
-          "input_per_1m": 0.2,
-          "cached_input_per_1m": 0.02,
-          "output_per_1m": 1.2,
-          "currency": "USD"
-        }
-      }
-    ]
+    "changed_models": []
   }
 }
