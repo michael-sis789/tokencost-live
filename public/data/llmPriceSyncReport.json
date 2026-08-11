@@ -1,79 +1,25 @@
 {
-  "date": "2026-08-07",
+  "date": "2026-08-11",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 11,
   "total_models_checked": 142,
-  "new_models": [
+  "new_models": [],
+  "changed_models": [
     {
-      "provider": "meta-ai",
-      "model": "muse-spark-1.2-contributor",
-      "name": "Muse Spark 1.2 Contributor"
-    },
-    {
-      "provider": "meta-ai",
-      "model": "muse-spark-1.2",
-      "name": "Muse Spark 1.2"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.5",
-      "name": "Grok 4.5 ≤200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.5-200k",
-      "name": "Grok 4.5 >200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-build-0.1",
-      "name": "Grok Build 0.1 ≤200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-build-0.1-200k",
-      "name": "Grok Build 0.1 >200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.3",
-      "name": "Grok 4.3 ≤200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.3-200k",
-      "name": "Grok 4.3 >200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.20-multi-agent-0309",
-      "name": "Grok 4.20 Multi-Agent 0309 ≤200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.20-multi-agent-0309-200k",
-      "name": "Grok 4.20 Multi-Agent 0309 >200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.20-0309-reasoning",
-      "name": "Grok 4.20 0309 Reasoning ≤200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.20-0309-reasoning-200k",
-      "name": "Grok 4.20 0309 Reasoning >200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.20-0309-non-reasoning",
-      "name": "Grok 4.20 0309 Non-Reasoning ≤200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.20-0309-non-reasoning-200k",
-      "name": "Grok 4.20 0309 Non-Reasoning >200k"
+      "provider": "Anthropic",
+      "model": "claude-sonnet-5",
+      "previous": {
+        "input_per_1m": 3,
+        "cached_input_per_1m": null,
+        "output_per_1m": 15,
+        "currency": "USD"
+      },
+      "current": {
+        "input_per_1m": 2,
+        "cached_input_per_1m": null,
+        "output_per_1m": 10,
+        "currency": "USD"
+      }
     }
-  ],
-  "changed_models": []
+  ]
 }

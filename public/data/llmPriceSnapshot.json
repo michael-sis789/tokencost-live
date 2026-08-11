@@ -123,9 +123,9 @@
     "provider": "Anthropic",
     "model": "claude-sonnet-5",
     "name": "Claude Sonnet 5",
-    "input_per_1m": 3,
+    "input_per_1m": 2,
     "cached_input_per_1m": null,
-    "output_per_1m": 15,
+    "output_per_1m": 10,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
   },
