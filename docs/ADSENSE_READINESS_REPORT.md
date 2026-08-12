@@ -1,6 +1,6 @@
 # AdSense Readiness Report
 
-Date: 2026-08-11
+Date: 2026-08-12
 
 ## URL counts
 
@@ -39,7 +39,7 @@ Date: 2026-08-11
 
 - /data/verifiedPricing.json
 - /data/llmPriceSyncReport.json
-- Last verified: 2026-08-11
+- Last verified: 2026-08-12
 - Daily sync source: simonw/llm-prices.
 - Official Kimi source: Kimi platform pricing page for Kimi K3, K2.7 Code and K2.6 CNY rows.
 - Public pages preserve source URL, currency and last-verified date for pricing rows.
