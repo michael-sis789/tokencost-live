@@ -1,18 +1,13 @@
 {
-  "date": "2026-08-12",
+  "date": "2026-08-13",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 11,
-  "total_models_checked": 144,
+  "total_models_checked": 145,
   "new_models": [
     {
-      "provider": "xAI",
-      "model": "grok-4.6",
-      "name": "Grok 4.6 ≤200k"
-    },
-    {
-      "provider": "xAI",
-      "model": "grok-4.6-200k",
-      "name": "Grok 4.6 >200k"
+      "provider": "Google",
+      "model": "gemini-3.7-flash",
+      "name": "Gemini 3.7 Flash"
     }
   ],
   "changed_models": []
