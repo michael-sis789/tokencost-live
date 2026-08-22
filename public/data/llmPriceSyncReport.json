@@ -1,14 +1,93 @@
 {
-  "date": "2026-08-13",
+  "date": "2026-08-22",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 11,
-  "total_models_checked": 145,
+  "total_models_checked": 152,
   "new_models": [
     {
-      "provider": "Google",
-      "model": "gemini-3.7-flash",
-      "name": "Gemini 3.7 Flash"
+      "provider": "OpenAI",
+      "model": "gpt-5.6-cyber",
+      "name": "GPT-5.6 Cyber"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5.5-cyber",
+      "name": "GPT-5.5 Cyber"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5.3-codex",
+      "name": "GPT-5.3 Codex"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5-search-api",
+      "name": "GPT-5 Search API"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "chat-latest",
+      "name": "ChatGPT Latest (chat-latest)"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-image-1.5-image",
+      "name": "gpt-image-1.5 (image gen) image tokens"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-image-1.5-text",
+      "name": "gpt-image-1.5 (image gen) text tokens"
     }
   ],
-  "changed_models": []
+  "changed_models": [
+    {
+      "provider": "OpenAI",
+      "model": "o3",
+      "previous": {
+        "input_per_1m": 10,
+        "cached_input_per_1m": 0.5,
+        "output_per_1m": 40,
+        "currency": "USD"
+      },
+      "current": {
+        "input_per_1m": 2,
+        "cached_input_per_1m": 0.5,
+        "output_per_1m": 8,
+        "currency": "USD"
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5.6-sol",
+      "previous": {
+        "input_per_1m": 5,
+        "cached_input_per_1m": 0.5,
+        "output_per_1m": 30,
+        "currency": "USD"
+      },
+      "current": {
+        "input_per_1m": 4,
+        "cached_input_per_1m": 0.4,
+        "output_per_1m": 20,
+        "currency": "USD"
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5.6-sol-272k",
+      "previous": {
+        "input_per_1m": 10,
+        "cached_input_per_1m": 1,
+        "output_per_1m": 45,
+        "currency": "USD"
+      },
+      "current": {
+        "input_per_1m": 8,
+        "cached_input_per_1m": 0.8,
+        "output_per_1m": 30,
+        "currency": "USD"
+      }
+    }
+  ]
 }
