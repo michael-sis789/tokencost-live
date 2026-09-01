@@ -44,7 +44,7 @@
     "model": "claude-3.7-sonnet",
     "name": "Claude 3.7 Sonnet",
     "input_per_1m": 3,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.3,
     "output_per_1m": 15,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -54,7 +54,7 @@
     "model": "claude-3.5-sonnet",
     "name": "Claude 3.5 Sonnet",
     "input_per_1m": 3,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.3,
     "output_per_1m": 15,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -64,7 +64,7 @@
     "model": "claude-3-opus",
     "name": "Claude 3 Opus",
     "input_per_1m": 15,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 1.5,
     "output_per_1m": 75,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -74,7 +74,7 @@
     "model": "claude-3-haiku",
     "name": "Claude 3 Haiku",
     "input_per_1m": 0.25,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.025,
     "output_per_1m": 1.25,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -84,7 +84,7 @@
     "model": "claude-3.5-haiku",
     "name": "Claude 3.5 Haiku",
     "input_per_1m": 0.8,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.08,
     "output_per_1m": 4,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -94,7 +94,7 @@
     "model": "claude-4.5-haiku",
     "name": "Claude 4.5 Haiku",
     "input_per_1m": 1,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.1,
     "output_per_1m": 5,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -104,7 +104,7 @@
     "model": "claude-sonnet-4.5",
     "name": "Claude Sonnet 4 and 4.5 ≤200k",
     "input_per_1m": 3,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.3,
     "output_per_1m": 15,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -114,7 +114,7 @@
     "model": "claude-sonnet-4.5-200k",
     "name": "Claude Sonnet 4 and 4.5 >200k",
     "input_per_1m": 6,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.6,
     "output_per_1m": 22.5,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -124,7 +124,7 @@
     "model": "claude-sonnet-5",
     "name": "Claude Sonnet 5",
     "input_per_1m": 2,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.2,
     "output_per_1m": 10,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -134,7 +134,7 @@
     "model": "claude-opus-4",
     "name": "Claude Opus 4",
     "input_per_1m": 15,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 1.5,
     "output_per_1m": 75,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -144,7 +144,7 @@
     "model": "claude-opus-4-1",
     "name": "Claude Opus 4.1",
     "input_per_1m": 15,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 1.5,
     "output_per_1m": 75,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -154,7 +154,7 @@
     "model": "claude-opus-4-5",
     "name": "Claude Opus 4.5",
     "input_per_1m": 5,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.5,
     "output_per_1m": 25,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -164,7 +164,7 @@
     "model": "claude-opus-4-6",
     "name": "Claude Opus 4.6",
     "input_per_1m": 5,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.5,
     "output_per_1m": 25,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -174,7 +174,7 @@
     "model": "claude-opus-4-7",
     "name": "Claude Opus 4.7",
     "input_per_1m": 5,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.5,
     "output_per_1m": 25,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -184,7 +184,7 @@
     "model": "claude-opus-4-8",
     "name": "Claude Opus 4.8",
     "input_per_1m": 5,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 0.5,
     "output_per_1m": 25,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -194,7 +194,17 @@
     "model": "claude-fable-5",
     "name": "Claude Fable 5",
     "input_per_1m": 10,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 1,
+    "output_per_1m": 50,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-fable-5-1",
+    "name": "Claude Fable 5.1",
+    "input_per_1m": 10,
+    "cached_input_per_1m": 0.25,
     "output_per_1m": 50,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
@@ -204,7 +214,7 @@
     "model": "claude-mythos-5",
     "name": "Claude Mythos 5",
     "input_per_1m": 10,
-    "cached_input_per_1m": null,
+    "cached_input_per_1m": 1,
     "output_per_1m": 50,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
