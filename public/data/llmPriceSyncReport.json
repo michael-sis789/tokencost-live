@@ -1,18 +1,53 @@
 {
-  "date": "2026-09-04",
+  "date": "2026-09-22",
   "source": "https://github.com/simonw/llm-prices",
-  "source_files_checked": 11,
-  "total_models_checked": 158,
+  "source_files_checked": 12,
+  "total_models_checked": 167,
   "new_models": [
     {
-      "provider": "OpenAI",
-      "model": "gpt-6-astra",
-      "name": "GPT-6 Astra ≤272k"
+      "provider": "Anthropic",
+      "model": "claude-opus-5",
+      "name": "Claude Opus 5"
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-opus-5-5",
+      "name": "Claude Opus 5.5"
     },
     {
       "provider": "OpenAI",
-      "model": "gpt-6-astra-272k",
-      "name": "GPT-6 Astra >272k"
+      "model": "gpt-6-sol",
+      "name": "GPT-6 Sol ≤272k"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-6-sol-272k",
+      "name": "GPT-6 Sol >272k"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-6-luna",
+      "name": "GPT-6 Luna ≤272k"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-6-luna-272k",
+      "name": "GPT-6 Luna >272k"
+    },
+    {
+      "provider": "typesafe",
+      "model": "jev-1.13.0",
+      "name": "Jev 1.13"
+    },
+    {
+      "provider": "xAI",
+      "model": "grok-4.7",
+      "name": "Grok 4.7 ≤200k"
+    },
+    {
+      "provider": "xAI",
+      "model": "grok-4.7-200k",
+      "name": "Grok 4.7 >200k"
     }
   ],
   "changed_models": []
