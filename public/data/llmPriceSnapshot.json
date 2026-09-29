@@ -131,6 +131,16 @@
   },
   {
     "provider": "Anthropic",
+    "model": "claude-sonnet-5.5",
+    "name": "Claude Sonnet 5.5",
+    "input_per_1m": 2,
+    "cached_input_per_1m": 0.2,
+    "output_per_1m": 10,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
     "model": "claude-opus-4",
     "name": "Claude Opus 4",
     "input_per_1m": 15,
