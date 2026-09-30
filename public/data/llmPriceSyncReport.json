@@ -1,13 +1,18 @@
 {
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 12,
-  "total_models_checked": 168,
+  "total_models_checked": 170,
   "new_models": [
     {
-      "provider": "Anthropic",
-      "model": "claude-sonnet-5.5",
-      "name": "Claude Sonnet 5.5"
+      "provider": "OpenAI",
+      "model": "gpt-6.1-sol",
+      "name": "GPT-6.1 Sol ≤272k"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-6.1-sol-272k",
+      "name": "GPT-6.1 Sol >272k"
     }
   ],
   "changed_models": []
