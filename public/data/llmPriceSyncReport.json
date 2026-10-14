@@ -1,38 +1,13 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-14",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 12,
-  "total_models_checked": 176,
+  "total_models_checked": 177,
   "new_models": [
     {
-      "provider": "Anthropic",
-      "model": "claude-haiku-5.5",
-      "name": "Claude Haiku 5.5 ≤100k"
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-haiku-5.5-100k",
-      "name": "Claude Haiku 5.5 >100k"
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-sonnet-4",
-      "name": "Claude Sonnet 4 ≤200k"
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-sonnet-4-200k",
-      "name": "Claude Sonnet 4 >200k"
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-sonnet-4.6",
-      "name": "Claude Sonnet 4.6"
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-mythos-5-1",
-      "name": "Claude Mythos 5.1"
+      "provider": "Google",
+      "model": "gemini-4-argon",
+      "name": "Gemini 4 Argon"
     }
   ],
   "changed_models": []
