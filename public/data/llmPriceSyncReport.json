@@ -1,13 +1,38 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-24",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 12,
-  "total_models_checked": 177,
+  "total_models_checked": 183,
   "new_models": [
     {
-      "provider": "Google",
-      "model": "gemini-4-argon",
-      "name": "Gemini 4 Argon"
+      "provider": "moonshot-ai",
+      "model": "kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro"
+    },
+    {
+      "provider": "moonshot-ai",
+      "model": "kimi-k3.1-pro-highspeed",
+      "name": "Kimi K3.1 Pro Highspeed"
+    },
+    {
+      "provider": "moonshot-ai",
+      "model": "kimi-k3",
+      "name": "Kimi K3"
+    },
+    {
+      "provider": "moonshot-ai",
+      "model": "kimi-k2.7-code",
+      "name": "Kimi K2.7 Code"
+    },
+    {
+      "provider": "moonshot-ai",
+      "model": "kimi-k2.7-code-highspeed",
+      "name": "Kimi K2.7 Code Highspeed"
+    },
+    {
+      "provider": "moonshot-ai",
+      "model": "kimi-k2.6",
+      "name": "Kimi K2.6"
     }
   ],
   "changed_models": []
