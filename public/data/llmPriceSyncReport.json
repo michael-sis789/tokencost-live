@@ -1,38 +1,18 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-27",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 12,
-  "total_models_checked": 183,
+  "total_models_checked": 185,
   "new_models": [
     {
-      "provider": "moonshot-ai",
-      "model": "kimi-k3.1-pro",
-      "name": "Kimi K3.1 Pro"
+      "provider": "OpenAI",
+      "model": "gpt-6.1-terra",
+      "name": "GPT-6.1 Terra ≤272k"
     },
     {
-      "provider": "moonshot-ai",
-      "model": "kimi-k3.1-pro-highspeed",
-      "name": "Kimi K3.1 Pro Highspeed"
-    },
-    {
-      "provider": "moonshot-ai",
-      "model": "kimi-k3",
-      "name": "Kimi K3"
-    },
-    {
-      "provider": "moonshot-ai",
-      "model": "kimi-k2.7-code",
-      "name": "Kimi K2.7 Code"
-    },
-    {
-      "provider": "moonshot-ai",
-      "model": "kimi-k2.7-code-highspeed",
-      "name": "Kimi K2.7 Code Highspeed"
-    },
-    {
-      "provider": "moonshot-ai",
-      "model": "kimi-k2.6",
-      "name": "Kimi K2.6"
+      "provider": "OpenAI",
+      "model": "gpt-6.1-terra-272k",
+      "name": "GPT-6.1 Terra >272k"
     }
   ],
   "changed_models": []
