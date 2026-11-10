@@ -1,18 +1,33 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-11-10",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 12,
-  "total_models_checked": 185,
+  "total_models_checked": 190,
   "new_models": [
     {
-      "provider": "OpenAI",
-      "model": "gpt-6.1-terra",
-      "name": "GPT-6.1 Terra ≤272k"
+      "provider": "Anthropic",
+      "model": "claude-fable-5-2",
+      "name": "Claude Fable 5.2"
     },
     {
-      "provider": "OpenAI",
-      "model": "gpt-6.1-terra-272k",
-      "name": "GPT-6.1 Terra >272k"
+      "provider": "Anthropic",
+      "model": "claude-mythos-5-2",
+      "name": "Claude Mythos 5.2"
+    },
+    {
+      "provider": "meta-ai",
+      "model": "muse-wonder-1.0",
+      "name": "Muse Wonder 1.0"
+    },
+    {
+      "provider": "meta-ai",
+      "model": "muse-ember-1.0",
+      "name": "Muse Ember 1.0 ≤200k"
+    },
+    {
+      "provider": "meta-ai",
+      "model": "muse-ember-1.0-200k",
+      "name": "Muse Ember 1.0 >200k"
     }
   ],
   "changed_models": []

@@ -291,6 +291,16 @@
   },
   {
     "provider": "Anthropic",
+    "model": "claude-fable-5-2",
+    "name": "Claude Fable 5.2",
+    "input_per_1m": 8,
+    "cached_input_per_1m": 0.2,
+    "output_per_1m": 40,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
     "model": "claude-mythos-5",
     "name": "Claude Mythos 5",
     "input_per_1m": 10,
@@ -306,6 +316,16 @@
     "input_per_1m": 10,
     "cached_input_per_1m": 0.25,
     "output_per_1m": 50,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
+  },
+  {
+    "provider": "Anthropic",
+    "model": "claude-mythos-5-2",
+    "name": "Claude Mythos 5.2",
+    "input_per_1m": 8,
+    "cached_input_per_1m": 0.2,
+    "output_per_1m": 40,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/anthropic.json"
   },
@@ -618,6 +638,36 @@
     "output_per_1m": 20,
     "currency": "USD",
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
+    "provider": "meta-ai",
+    "model": "muse-wonder-1.0",
+    "name": "Muse Wonder 1.0",
+    "input_per_1m": 4,
+    "cached_input_per_1m": 0.2,
+    "output_per_1m": 20,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/meta-ai.json"
+  },
+  {
+    "provider": "meta-ai",
+    "model": "muse-ember-1.0",
+    "name": "Muse Ember 1.0 ≤200k",
+    "input_per_1m": 0.1,
+    "cached_input_per_1m": 0.004,
+    "output_per_1m": 0.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/meta-ai.json"
+  },
+  {
+    "provider": "meta-ai",
+    "model": "muse-ember-1.0-200k",
+    "name": "Muse Ember 1.0 >200k",
+    "input_per_1m": 0.3,
+    "cached_input_per_1m": 0.012,
+    "output_per_1m": 1.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/meta-ai.json"
   },
   {
     "provider": "meta-ai",

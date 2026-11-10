@@ -1,6 +1,6 @@
 # Search Console Checklist
 
-Date: 2026-10-27
+Date: 2026-11-10
 
 Owner actions:
 
