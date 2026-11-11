@@ -1,33 +1,13 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 12,
-  "total_models_checked": 190,
+  "total_models_checked": 191,
   "new_models": [
     {
-      "provider": "Anthropic",
-      "model": "claude-fable-5-2",
-      "name": "Claude Fable 5.2"
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-mythos-5-2",
-      "name": "Claude Mythos 5.2"
-    },
-    {
-      "provider": "meta-ai",
-      "model": "muse-wonder-1.0",
-      "name": "Muse Wonder 1.0"
-    },
-    {
-      "provider": "meta-ai",
-      "model": "muse-ember-1.0",
-      "name": "Muse Ember 1.0 ≤200k"
-    },
-    {
-      "provider": "meta-ai",
-      "model": "muse-ember-1.0-200k",
-      "name": "Muse Ember 1.0 >200k"
+      "provider": "Google",
+      "model": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon"
     }
   ],
   "changed_models": []
