@@ -650,6 +650,16 @@
     "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
   },
   {
+    "provider": "Google",
+    "model": "gemini-4-hydrogen",
+    "name": "Gemini 4 Hydrogen",
+    "input_per_1m": 1.5,
+    "cached_input_per_1m": 0.075,
+    "output_per_1m": 7.5,
+    "currency": "USD",
+    "source_url": "https://raw.githubusercontent.com/simonw/llm-prices/main/data/google.json"
+  },
+  {
     "provider": "meta-ai",
     "model": "muse-wonder-1.0",
     "name": "Muse Wonder 1.0",

@@ -1,13 +1,13 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-13",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 12,
-  "total_models_checked": 191,
+  "total_models_checked": 192,
   "new_models": [
     {
       "provider": "Google",
-      "model": "gemini-4-carbon",
-      "name": "Gemini 4 Carbon"
+      "model": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen"
     }
   ],
   "changed_models": []
