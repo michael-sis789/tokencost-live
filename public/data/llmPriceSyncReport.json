@@ -1,13 +1,28 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-18",
   "source": "https://github.com/simonw/llm-prices",
   "source_files_checked": 12,
-  "total_models_checked": 192,
+  "total_models_checked": 196,
   "new_models": [
     {
-      "provider": "Google",
-      "model": "gemini-4-hydrogen",
-      "name": "Gemini 4 Hydrogen"
+      "provider": "OpenAI",
+      "model": "gpt-6.2-astra",
+      "name": "GPT-6.2 Astra ≤272k"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-6.2-astra-272k",
+      "name": "GPT-6.2 Astra >272k"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-6.2-sol",
+      "name": "GPT-6.2 Sol ≤272k"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-6.2-sol-272k",
+      "name": "GPT-6.2 Sol >272k"
     }
   ],
   "changed_models": []
